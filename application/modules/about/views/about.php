@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'About Us',
-    'bc_desc' => '',
+    'bc_h1' => 'About Our Company',
+    'bc_desc' => 'Discover India\'s trusted packers and movers company, providing certified, reliable, and affordable household & commercial relocation services nationwide.',
     'breadcrumbs' => [
         ['name' => 'About Us']
     ]

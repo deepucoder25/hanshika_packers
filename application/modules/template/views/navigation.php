@@ -11,7 +11,7 @@
   $active_tab = '';
   if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
     $active_tab = 'home';
-  } elseif ($class === 'about' || in_array($segment1, ['about-us', 'why-choose-us', 'faqs', 'testimonials'])) {
+  } elseif ($class === 'about' || in_array($segment1, ['about-us', 'why-choose-us', 'faqs', 'testimonials', 'privacy-policy', 'terms-and-conditions'])) {
     $active_tab = 'about';
   } elseif ($class === 'services' || in_array($segment1, ['our-services', 'home-shifting', 'office-relocation', 'car-transportation', 'bike-transportation', 'warehouse-and-storage', 'domestic-relocation', 'international-shifting', 'corporate-shifting', 'intercity-shifting', 'local-shifting', 'logistic-services', 'pet-relocation', 'home-relocation', 'storage-services', 'car-transportation-service'])) {
     $active_tab = 'services';
@@ -164,7 +164,21 @@
             <li>
               <a class="dropdown-item<?= $segment1 === 'testimonials' ? ' active' : '' ?>" href="<?= site_url('testimonials') ?>">
                 <span class="icon-box yellow-icon"><i class="bi bi-chat-square-quote-fill"></i></span>
-                <span>Testimonial</span>
+                <span>Testimonials</span>
+                <i class="bi bi-chevron-right item-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item<?= $segment1 === 'privacy-policy' ? ' active' : '' ?>" href="<?= site_url('privacy-policy') ?>">
+                <span class="icon-box red-icon"><i class="bi bi-shield-lock-fill"></i></span>
+                <span>Privacy Policy</span>
+                <i class="bi bi-chevron-right item-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item<?= $segment1 === 'terms-and-conditions' ? ' active' : '' ?>" href="<?= site_url('terms-and-conditions') ?>">
+                <span class="icon-box yellow-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+                <span>Terms &amp; Conditions</span>
                 <i class="bi bi-chevron-right item-arrow"></i>
               </a>
             </li>
@@ -331,6 +345,20 @@
               <div class="d-flex align-items-center">
                 <span class="sub-icon-box"><i class="bi bi-chat-square-quote-fill"></i></span>
                 <span>Testimonials</span>
+              </div>
+              <i class="bi bi-chevron-right sub-arrow"></i>
+            </a>
+            <a href="<?= site_url('privacy-policy') ?>" class="sub-item-link<?= $segment1 === 'privacy-policy' ? ' active' : '' ?>">
+              <div class="d-flex align-items-center">
+                <span class="sub-icon-box"><i class="bi bi-shield-lock-fill"></i></span>
+                <span>Privacy Policy</span>
+              </div>
+              <i class="bi bi-chevron-right sub-arrow"></i>
+            </a>
+            <a href="<?= site_url('terms-and-conditions') ?>" class="sub-item-link<?= $segment1 === 'terms-and-conditions' ? ' active' : '' ?>">
+              <div class="d-flex align-items-center">
+                <span class="sub-icon-box"><i class="bi bi-file-earmark-text-fill"></i></span>
+                <span>Terms &amp; Conditions</span>
               </div>
               <i class="bi bi-chevron-right sub-arrow"></i>
             </a>

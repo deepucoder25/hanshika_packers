@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Bike Transportation',
-    'bc_desc' => "Bike Transportation ",
+    'bc_h1' => 'Bike Transportation Services',
+    'bc_desc' => 'Reliable bike transportation services with multi-layer scratch-proof packing, doorstep pickup, and nationwide safe two-wheeler relocation.',
     'breadcrumbs' => [
         ['name' => 'Bike Transportation']
     ]

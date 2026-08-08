@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Loading and Unloading Services',
-    'bc_desc' => 'Loading and Unloading Services',
+    'bc_desc' => 'Professional loading and unloading services executed by trained labor ensuring zero damage to heavy furniture, appliances, and delicate goods.',
     'breadcrumbs' => [
         ['name' => 'Loading and Unloading']
     ]

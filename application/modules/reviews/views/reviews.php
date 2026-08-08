@@ -1,8 +1,8 @@
 <main class="main">
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Our Reviews',
-    'bc_desc' => 'Read what our customers have to say',
+    'bc_h1' => 'Customer Reviews & Rating',
+    'bc_desc' => 'Read verified ratings, testimonials, and genuine reviews from real customers who trusted us for safe and affordable household shifting across India.',
     'breadcrumbs' => [
         ['name' => 'Reviews']
     ]

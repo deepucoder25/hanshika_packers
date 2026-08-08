@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Contact Us',
-    'bc_desc' => 'Contact Us',
+    'bc_h1' => 'Contact Our Moving Experts',
+    'bc_desc' => 'Get in touch with our 24x7 relocation support team for instant free quotes, branch addresses, helpline numbers, and live WhatsApp assistance.',
     'breadcrumbs' => [
         ['name' => 'Contact Us']
     ]

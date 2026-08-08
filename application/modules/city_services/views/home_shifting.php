@@ -3,10 +3,11 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => '',
-    'bc_title_white' => 'Home Shifting in',
-    'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_h1' => 'Home Shifting Services in ' . $city,
+    'bc_desc' => 'Professional home shifting services in ' . $city . ' with 100% damage-free packing, safe household goods transport, and seamless door-to-door relocation.',
+    'breadcrumbs' => [
+        ['name' => 'Home Shifting in ' . $city]
+    ]
 ]); 
 ?>
 

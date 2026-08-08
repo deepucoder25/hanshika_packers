@@ -3,10 +3,11 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => 'Video Gallery',
-    'bc_title_white' => 'Video',
-    'bc_title_orange' => 'Gallery',
-    'bc_desc' => 'Watch our step-by-step cargo handling processes, transport safety standards, and global freight forwarding in action.'
+    'bc_h1' => 'Our Relocation Video Gallery',
+    'bc_desc' => 'Watch step-by-step videos of our expert household packing techniques, car carrier loading, and safe transport standards in action.',
+    'breadcrumbs' => [
+        ['name' => 'Video Gallery']
+    ]
 ]); 
 ?>
 

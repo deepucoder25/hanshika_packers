@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Packing and Moving Services',
-    'bc_desc' => 'Packing and Moving Services',
+    'bc_desc' => 'High-quality packing and moving services using premium bubble wrap, sturdy corrugated boxes, and expert handlers for complete peace of mind.',
     'breadcrumbs' => [
         ['name' => 'Packing and Moving']
     ]

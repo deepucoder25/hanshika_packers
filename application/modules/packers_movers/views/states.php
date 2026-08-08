@@ -1,7 +1,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Our Branches',
-    'bc_desc' => '',
+    'bc_h1' => 'Our Branch Network Across India',
+    'bc_desc' => 'Explore our nationwide network of branch offices across major Indian states for doorstep packing, local shifting, intercity moving, and warehousing.',
     'breadcrumbs' => [
         ['name' => 'Our Branches']
     ]

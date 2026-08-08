@@ -22,8 +22,6 @@ if (isset($breadcrumbs) && is_array($breadcrumbs) && !empty($breadcrumbs)) {
             'name' => $name
         ];
         if ($url) {
-            // Need absolute URL for schema if it's relative, but site_url() or base_url() is often used in $crumb['url']
-            // If it's just a fragment, we assume it's correctly formatted by the controller/view.
             $item['item'] = $url;
         }
         $schema_items[] = $item;
@@ -48,27 +46,34 @@ $schema_json = [
 <?= json_encode($schema_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 </script>
 
-<!-- Breadcrumbs Section -->
+<!-- Styled White Breadcrumb Section -->
 <section class="dynamic-bc-section">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-start">
+        <!-- Row 1: Breadcrumb Navigation Pill -->
         <nav class="dyn-bc-nav" aria-label="breadcrumb">
-            <a href="<?= site_url() ?>">Home</a>
+            <a href="<?= site_url() ?>" class="dyn-bc-link">
+                <span class="bc-home-icon"><i class="bi bi-house-door-fill"></i></span>
+                <span>Home</span>
+            </a>
             <?php if (isset($breadcrumbs) && is_array($breadcrumbs) && !empty($breadcrumbs)): ?>
                 <?php foreach ($breadcrumbs as $crumb): ?>
-                    <span class="dyn-bc-sep">›</span>
+                    <i class="bi bi-chevron-right dyn-bc-sep"></i>
                     <?php if (isset($crumb['url']) && !empty($crumb['url']) && $crumb['url'] !== 'javascript:void(0)'): ?>
-                        <a href="<?= $crumb['url'] ?>"><?= isset($crumb['name']) ? $crumb['name'] : $crumb['title'] ?></a>
+                        <a href="<?= $crumb['url'] ?>" class="dyn-bc-link"><?= isset($crumb['name']) ? $crumb['name'] : $crumb['title'] ?></a>
                     <?php else: ?>
-                        <span
-                            class="dyn-bc-current"><?= isset($crumb['name']) ? $crumb['name'] : (isset($crumb['title']) ? $crumb['title'] : '') ?></span>
+                        <span class="dyn-bc-current"><?= isset($crumb['name']) ? $crumb['name'] : (isset($crumb['title']) ? $crumb['title'] : '') ?></span>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php else: ?>
-                <span class="dyn-bc-sep">›</span>
+                <i class="bi bi-chevron-right dyn-bc-sep"></i>
                 <span class="dyn-bc-current"><?= isset($bc_current) ? $bc_current : '' ?></span>
             <?php endif; ?>
         </nav>
-        <h1><?= isset($bc_h1) ? $bc_h1 : '' ?></h1>
+
+        <!-- Row 2: Page H1 Title -->
+        <h1 class="dyn-bc-title"><?= isset($bc_h1) ? $bc_h1 : '' ?></h1>
+
+        <!-- Row 3: Page Description -->
         <?php if (isset($bc_desc) && !empty($bc_desc)): ?>
             <p class="dyn-bc-desc"><?= $bc_desc ?></p>
         <?php endif; ?>

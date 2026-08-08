@@ -3,10 +3,11 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => '',
-    'bc_title_white' => 'Car Transportation in',
-    'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_h1' => 'Car Transportation Services in ' . $city,
+    'bc_desc' => 'Safe and secure car carrier transportation in ' . $city . ' featuring enclosed car trailers, transit insurance, and doorstep vehicle delivery.',
+    'breadcrumbs' => [
+        ['name' => 'Car Transport in ' . $city]
+    ]
 ]); 
 ?>
 

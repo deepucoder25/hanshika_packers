@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Car Transportation',
-    'bc_desc' => 'Car Transportation Services',
+    'bc_h1' => 'Car Transportation Services',
+    'bc_desc' => 'Safe and secure car transportation services in specialized enclosed car carriers with real-time tracking, transit insurance, and door-to-door delivery.',
     'breadcrumbs' => [
         ['name' => 'Car Transportation']
     ]

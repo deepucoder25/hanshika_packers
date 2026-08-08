@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Frequently Asked Questions',
-    'bc_desc' => "Frequently Asked Questions",
+    'bc_h1' => 'Frequently Asked Questions (FAQ)',
+    'bc_desc' => 'Find clear answers to common questions regarding moving costs, transit insurance coverage, packing techniques, consignment tracking, and shifting timelines.',
     'breadcrumbs' => [
         ['name' => 'Frequently Asked Questions']
     ]

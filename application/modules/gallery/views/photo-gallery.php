@@ -3,10 +3,11 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => 'Photo Gallery',
-    'bc_title_white' => 'Photo',
-    'bc_title_orange' => 'Gallery',
-    'bc_desc' => 'Explore visual highlights of our cargo handling, warehouse storage, specialized container fleets, and global logistics operations.'
+    'bc_h1' => 'Our Work Photo Gallery',
+    'bc_desc' => 'Explore live photos of our professional packing, safe loading, modern transport container fleets, and warehouse storage operations.',
+    'breadcrumbs' => [
+        ['name' => 'Photo Gallery']
+    ]
 ]); 
 ?>
 

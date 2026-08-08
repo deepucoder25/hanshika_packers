@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Office Relocation',
-    'bc_desc' => 'Office Relocation Services',
+    'bc_h1' => 'Office Relocation Services',
+    'bc_desc' => 'Seamless office relocation and commercial shifting solutions with zero business downtime, secure IT equipment packing, and hassle-free corporate moving.',
     'breadcrumbs' => [
         ['name' => 'Office Relocation']
     ]

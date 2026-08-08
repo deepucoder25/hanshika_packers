@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Privacy Policy',
-    'bc_desc' => "Privacy Policy",
+    'bc_desc' => 'Read our comprehensive privacy policy detailing data security practices, customer information protection, and user confidentiality guarantees.',
     'breadcrumbs' => [
         ['name' => 'Privacy Policy']
     ]

@@ -5,8 +5,8 @@
     <!-- Breadcrumbs Section -->
     <!-- Breadcrumbs Section -->
     <?php $this->load->view('about/dynamic_breadcrumbs', [
-        'bc_h1' => 'Blog',
-        'bc_desc' => '',
+        'bc_h1' => 'Relocation Blog & Moving Tips',
+        'bc_desc' => 'Explore expert packing guides, household shifting tips, moving checklists, and logistics insights to make your relocation smooth and hassle-free.',
         'breadcrumbs' => [
             ['name' => 'Blog']
         ]

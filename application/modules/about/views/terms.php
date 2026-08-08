@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Terms and Conditions',
-    'bc_desc' => "Terms and Conditions",
+    'bc_desc' => 'Review our transparent terms and conditions governing relocation service agreements, transit insurance terms, payment policies, and guidelines.',
     'breadcrumbs' => [
         ['name' => 'Terms and Conditions']
     ]

@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Why Choose Us',
-    'bc_desc' => "Why Choose $company3",
+    'bc_desc' => 'Discover why thousands of satisfied families and businesses choose us for 100% safe packing, transparent pricing, verified staff, and 24x7 customer support.',
     'breadcrumbs' => [
         ['name' => 'Why Choose Us']
     ]

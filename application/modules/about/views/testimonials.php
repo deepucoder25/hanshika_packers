@@ -3,8 +3,8 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Testimonials',
-    'bc_desc' => "Testimonials $company3",
+    'bc_h1' => 'Customer Testimonials & Reviews',
+    'bc_desc' => 'Read real customer feedback, ratings, and success stories from families and corporate clients who experienced our fast, safe, and stress-free relocation.',
     'breadcrumbs' => [
         ['name' => 'Testimonials']
     ]

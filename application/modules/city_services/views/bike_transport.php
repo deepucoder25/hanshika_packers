@@ -3,10 +3,11 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => '',
-    'bc_title_white' => 'Bike Transportation in',
-    'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_h1' => 'Bike Transportation Services in ' . $city,
+    'bc_desc' => 'Reliable two-wheeler and bike transportation in ' . $city . ' featuring multi-layer scratch-free packing, safe loading, and door-to-door delivery.',
+    'breadcrumbs' => [
+        ['name' => 'Bike Transport in ' . $city]
+    ]
 ]); 
 ?>
 
