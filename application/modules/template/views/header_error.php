@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>404 Error Page</title>
+	<title><?= isset($title) ? htmlspecialchars($title, ENT_QUOTES) : "Page Not Found (404) | " . htmlspecialchars($company3, ENT_QUOTES) ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<?= isset($description) ? htmlspecialchars($description, ENT_QUOTES) : "The requested page was not found." ?>" />
     <meta name="robots" content="noindex, nofollow"/>
     <link rel="apple-touch-icon" href="<?=base_url('assets/img/xs.png')?>">
     <link rel="icon" type="image/png" href="<?=base_url('assets/img/xs.png')?>" />

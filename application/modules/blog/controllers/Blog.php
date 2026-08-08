@@ -125,15 +125,13 @@ class Blog extends MX_Controller {
 
         $this->pagination->initialize($config);
 
-        $company_name = isset($this->comp['company3']) ? $this->comp['company3'] : 'Elite Packers and Movers';
-
         $data['blogs'] = array_slice($all_blogs, $offset, $per_page);
         $data['total'] = $total_rows;
         $data['recent_posts'] = array_slice($all_blogs, 0, 5);
 
-        $data['title'] = "Relocation & Shifting Guide Blog | " . $company_name;
-        $data['description'] = "Read expert articles on packing tips, house shifting guides, office relocation insights, and logistics news from " . $company_name . ".";
-        $data['keywords'] = "relocation blog, shifting tips, house moving guide, packers movers articles, packing advice";
+        $data['title'] = "Relocation Blog & Shifting Guides | " . $this->comp['company3'];
+        $data['description'] = "Explore expert articles on packing tips, house shifting checklists, office relocation advice, and logistics insights from " . $this->comp['company3'] . ".";
+        $data['keywords'] = "relocation blog, shifting tips, house moving guide, packers movers articles, packing advice, " . strtolower($this->comp['company3']);
         $data['module'] = "blog";
         $data['view_file'] = "blog"; 
 
@@ -165,13 +163,16 @@ class Blog extends MX_Controller {
         }
 
         if ($selected_blog) {
-            $company_name = isset($this->comp['company3']) ? $this->comp['company3'] : 'Elite Packers and Movers';
             $data['query'] = [$selected_blog];
             $data['recent_posts'] = array_slice($all_blogs, 0, 5);
             
-            $data['title'] = ucfirst($selected_blog->title) . " | " . $company_name;
-            $data['description'] = character_limiter(trim(preg_replace('/\s+/', ' ', strip_tags($selected_blog->description))), 155);
-            $data['keywords'] = "packers movers guide, " . strtolower($selected_blog->title) . ", relocation advice";
+            $meta_t = !empty($selected_blog->meta_title) ? $selected_blog->meta_title : (ucfirst($selected_blog->title) . " | " . $this->comp['company3']);
+            $meta_d = !empty($selected_blog->meta_desc) ? $selected_blog->meta_desc : character_limiter(trim(preg_replace('/\s+/', ' ', strip_tags($selected_blog->description))), 155);
+            $meta_k = !empty($selected_blog->tags) ? $selected_blog->tags : ("packers movers guide, " . strtolower($selected_blog->title) . ", relocation advice, " . strtolower($this->comp['company3']));
+            
+            $data['title'] = $meta_t;
+            $data['description'] = $meta_d;
+            $data['keywords'] = $meta_k;
             
             $image_file = $selected_blog->image;
             if ($image_file && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)) {

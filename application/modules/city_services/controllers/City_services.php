@@ -18,7 +18,8 @@ class City_services extends MX_Controller
         $data['city'] = $city;
         $data['ctlink'] = $city_slug;
         $data['title'] = "Best Home Shifting Services in $city | " . $this->comp['company3'];
-        $data['description'] = "Get reliable, safe, and professional home shifting services in $city from " . $this->comp['company3'] . ". Smooth door-to-door household relocation at affordable rates.";
+        $data['description'] = "Get reliable, safe, and professional home shifting services in $city from " . $this->comp['company3'] . ". Door-to-door household relocation at competitive rates.";
+        $data['keywords'] = "home shifting in $city, household movers $city, house relocation $city, packers movers $city, " . strtolower($this->comp['company3']) . " $city";
         $data['module'] = "city_services";
         $data['view_file'] = "home_shifting";
         echo Modules::run('template/layout2', $data);
@@ -30,7 +31,8 @@ class City_services extends MX_Controller
         $data['city'] = $city;
         $data['ctlink'] = $city_slug;
         $data['title'] = "Professional Office Relocation Services in $city | " . $this->comp['company3'];
-        $data['description'] = "Smooth and secure office shifting services in $city by " . $this->comp['company3'] . ". Minimize downtime with our experienced office relocation experts.";
+        $data['description'] = "Smooth and secure office shifting services in $city by " . $this->comp['company3'] . ". Minimize business downtime with our experienced relocation experts.";
+        $data['keywords'] = "office shifting in $city, corporate relocation $city, office movers $city, commercial shifting $city, " . strtolower($this->comp['company3']) . " $city";
         $data['module'] = "city_services";
         $data['view_file'] = "office_shifting";
         echo Modules::run('template/layout2', $data);
@@ -42,7 +44,8 @@ class City_services extends MX_Controller
         $data['city'] = $city;
         $data['ctlink'] = $city_slug;
         $data['title'] = "Safe Car Transportation Services in $city | " . $this->comp['company3'];
-        $data['description'] = "Secure car carrier and transportation services in $city by " . $this->comp['company3'] . ". On-time and damage-free vehicle delivery across India.";
+        $data['description'] = "Secure car carrier and vehicle transportation services in $city by " . $this->comp['company3'] . ". On-time and damage-free enclosed car delivery across India.";
+        $data['keywords'] = "car transport in $city, car carrier $city, vehicle shifting $city, car transport service $city, " . strtolower($this->comp['company3']) . " $city";
         $data['module'] = "city_services";
         $data['view_file'] = "car_transport";
         echo Modules::run('template/layout2', $data);
@@ -54,7 +57,8 @@ class City_services extends MX_Controller
         $data['city'] = $city;
         $data['ctlink'] = $city_slug;
         $data['title'] = "Reliable Bike Transportation Services in $city | " . $this->comp['company3'];
-        $data['description'] = "Hire trusted two-wheeler and bike shifting services in $city from " . $this->comp['company3'] . ". We ensure scratch-free and timely delivery.";
+        $data['description'] = "Hire trusted two-wheeler and bike shifting services in $city from " . $this->comp['company3'] . ". We ensure scratch-free packing and prompt doorstep delivery.";
+        $data['keywords'] = "bike transport in $city, motorcycle shifting $city, two wheeler transport $city, bike carrier $city, " . strtolower($this->comp['company3']) . " $city";
         $data['module'] = "city_services";
         $data['view_file'] = "bike_transport";
         echo Modules::run('template/layout2', $data);

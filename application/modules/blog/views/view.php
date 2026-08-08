@@ -7,7 +7,7 @@
 
     $this->load->view('about/dynamic_breadcrumbs', [
         'bc_h1' => $post_title,
-        'bc_desc' => 'Read expert relocation guides and shifting tips from ' . htmlspecialchars(isset($company3) ? $company3 : 'Elite Packers and Movers'),
+        'bc_desc' => 'Read expert relocation guides and shifting tips from ' . htmlspecialchars($company3),
         'breadcrumbs' => [
             ['name' => 'Blog', 'url' => site_url('blog')],
             ['name' => $post_title]

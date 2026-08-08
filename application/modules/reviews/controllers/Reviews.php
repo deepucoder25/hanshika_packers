@@ -77,13 +77,10 @@ class Reviews extends MX_Controller
             $query = null;
         }
         
-        $company_name = isset($this->comp['company3']) ? $this->comp['company3'] : 'Elite Packers and Movers';
         $data['reviews'] = $query;
-        $data['company3'] = $company_name;
-        $data['pagination'] = $this->pagination->create_links();
-        $data['title'] = "Verified Customer Reviews & Ratings | " . $company_name;
-        $data['description'] = "Read verified customer reviews, ratings, and real client feedback about " . $company_name . ". Check our service quality for home and vehicle relocation.";
-        $data['keywords'] = "customer reviews, packers movers ratings, client feedback, genuine shifting reviews, " . $company_name . " ratings";
+        $data['title'] = "Verified Customer Reviews & Ratings | " . $this->comp['company3'];
+        $data['description'] = "Read authentic 5-star customer reviews, ratings, and real client feedback about " . $this->comp['company3'] . ". Trusted by thousands for home shifting and vehicle transport.";
+        $data['keywords'] = "customer reviews, packers movers ratings, client feedback, genuine shifting reviews, " . strtolower($this->comp['company3']) . " ratings";
         $data['module'] = "reviews";
         $data['view_file'] = "reviews";
         echo Modules::run('template/layout2', $data);

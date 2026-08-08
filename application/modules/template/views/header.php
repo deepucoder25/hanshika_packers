@@ -4,34 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title><?= $title ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
+  if (!@$title) {
+    $title = "Best Packers and Movers in India | " . $company3;
+  }
   if (!@$description) {
-    $description = $company3 . " India offers reliable and efficient moving and storage solutions, ensuring your belongings are transported safely and securely to your new destination.";
+    $description = $company3 . " offers reliable, safe, and efficient home shifting, office relocation, and vehicle transport solutions across India at affordable rates.";
+  }
+  if (!@$keywords) {
+    $keywords = "packers and movers, home shifting services, office relocation, vehicle transport, car transport, bike shifting, " . strtolower($company3);
   }
   if (!@$city)
-    $city = "$addressRegion";
+    $city = isset($addressRegion) ? "$addressRegion" : "";
   if (!@$state)
-    $state = "$companystate";
+    $state = isset($companystate) ? "$companystate" : "";
   if (!@$img)
     $img = base_url('assets/images/logo/favicon.png');
   $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $url = ($url == site_url('home')) ? site_url() : strtolower($url);
   ?>
-  <meta name="description" content="<?= @$description ?>" />
-  <meta name="keywords" content="<?= @$keywords ?>" />
+  <title><?= htmlspecialchars($title, ENT_QUOTES) ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>" />
+  <meta name="keywords" content="<?= htmlspecialchars($keywords, ENT_QUOTES) ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <link rel="canonical" href="<?= @$url ?>" />
-  <meta name="author" content="<?= $company3 ?>" />
-  <meta name="copyright" content="<?= $company3 ?>" />
-  <meta name="reply-to" content="<?= $replyToMail ?>" />
-  <meta name="og_title" property="og:title" content="<?= @$title ?>">
+  <link rel="canonical" href="<?= htmlspecialchars($url, ENT_QUOTES) ?>" />
+  <meta name="author" content="<?= htmlspecialchars(@$company3, ENT_QUOTES) ?>" />
+  <meta name="copyright" content="<?= htmlspecialchars(@$company3, ENT_QUOTES) ?>" />
+  <meta name="reply-to" content="<?= htmlspecialchars(@$replyToMail, ENT_QUOTES) ?>" />
+  <meta name="og_title" property="og:title" content="<?= htmlspecialchars($title, ENT_QUOTES) ?>">
   <meta property="og:type" content="website">
-  <meta name="og_site_name" property="og:site_name" content="<?= $company3 ?>" />
-  <meta property="og:image" content="<?= $img ?>" />
-  <meta name="og_url" property="og:url" content="<?= @$url ?>" />
-  <meta property="og:description" content="<?= @$description ?>" />
+  <meta name="og_site_name" property="og:site_name" content="<?= htmlspecialchars(@$company3, ENT_QUOTES) ?>" />
+  <meta property="og:image" content="<?= htmlspecialchars($img, ENT_QUOTES) ?>" />
+  <meta name="og_url" property="og:url" content="<?= htmlspecialchars($url, ENT_QUOTES) ?>" />
+  <meta property="og:description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="<?= $themeColor ?>">
   <link rel="apple-touch-icon" href="<?= base_url('assets/images/logo/favicon.png') ?>">
