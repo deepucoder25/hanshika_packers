@@ -1,0 +1,18 @@
+/* gallery_modules.css */
+
+/* Photo Gallery */
+.gallery-photo-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid #eef1f6 !important; }
+.gallery-photo-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(95, 150, 24, 0.08) !important; border-color: #5f9618 !important; }
+.gallery-bg-success-soft { background-color: rgba(25, 135, 84, 0.1) !important; }
+.gallery-img-wrapper:hover .gallery-hover-overlay { opacity: 1 !important; }
+.gallery-bg-dark-50 { background-color: rgba(0, 0, 0, 0.4) !important; }
+.gallery-transition-all { transition: all 0.3s ease-in-out; }
+
+.gallery-img { height: 220px; object-fit: cover; }
+.gallery-icon-lg { font-size: 2rem; }
+.gallery-badge-sm { font-size: 0.75rem; }
+.gallery-title-sm { font-size: 1rem; }
+
+/* Video Gallery */
+.gallery-video-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid #eef1f6 !important; }
+.gallery-video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(95, 150, 24, 0.08) !important; border-color: #5f9618 !important; }
