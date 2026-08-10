@@ -75,15 +75,16 @@ class MX_Controller
         $this->comp['addressRegion'] = "Mumbai";
         $this->comp['postalCode'] = "421302";
         $this->comp['companystate'] = "Maharashtra";
-        $this->comp['themeColor'] = "#0a4ebd";
+        $this->comp['themeColor'] = "#d32f2f";
 
-        $this->comp['experience'] = "40+";
-        $this->comp['startYear'] = "1986";
+        $this->comp['experience'] = "5+";
+        $this->comp['startYear'] = "2020";
 
-        $this->comp['happyClients'] = "39,850+";
-        $this->comp['yearsExperience'] = "40+";
+        $this->comp['happyClients'] = "10,000+";
+        $this->comp['successfullShifts'] = "5000+";
+        $this->comp['yearsExperience'] = "5+";
         $this->comp['secureShifting'] = "100%";
-        $this->comp['statesCovered'] = "20+";
+        $this->comp['statesCovered'] = "10+";
 
         $this->comp['sku'] = "PM28957";
         $this->comp['mpn'] = "SPM28957";

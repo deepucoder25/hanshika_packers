@@ -1,12 +1,4 @@
-/* ==========================================================================
-   CONSOLIDATED & OPTIMIZED FOOTER STYLES
-   Mapped 100% to application/modules/template/views/footer.php
-   Theme Variables from navigation.css: --theme-red, --theme-yellow, --dark-bg
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Footer Container & Top CTA Banner Card
-   -------------------------------------------------------------------------- */
+/* 1. Footer Container & Top CTA Banner Card */
 .footer-section {
   background: #ffffff;
   color: var(--text-dark, #1e293b);
@@ -120,9 +112,7 @@
   color: var(--white, #ffffff);
 }
 
-/* --------------------------------------------------------------------------
-   2. Main Footer Body & Brand Column
-   -------------------------------------------------------------------------- */
+/* 2. Main Footer Body & Brand Column */
 .footer-main {
   padding: 10px 0 40px;
 }
@@ -175,9 +165,7 @@
   margin-bottom: 20px;
 }
 
-/* --------------------------------------------------------------------------
-   3. Social Media Buttons
-   -------------------------------------------------------------------------- */
+/* 3. Social Media Buttons */
 .footer-social-circles {
   display: flex;
   align-items: center;
@@ -262,9 +250,7 @@
   box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
 }
 
-/* --------------------------------------------------------------------------
-   4. Quick Links & Services Widgets
-   -------------------------------------------------------------------------- */
+/* 4. Quick Links & Services Widgets */
 .footer-widget-col {
   height: 100%;
 }
@@ -315,9 +301,7 @@
   transform: scale(1.2);
 }
 
-/* --------------------------------------------------------------------------
-   5. Contact Us Column
-   -------------------------------------------------------------------------- */
+/* 5. Contact Us Column */
 .footer-contact-blocks {
   display: flex;
   flex-direction: column;
@@ -370,9 +354,7 @@
   color: var(--theme-red);
 }
 
-/* --------------------------------------------------------------------------
-   6. Trust Badges Strip (Middle Row)
-   -------------------------------------------------------------------------- */
+/* 6. Trust Badges Strip (Middle Row) */
 .footer-trust-strip {
   background: #fdfbf7;
   border-top: 1px solid #e2e8f0;
@@ -419,9 +401,7 @@
   line-height: 1.35;
 }
 
-/* --------------------------------------------------------------------------
-   7. Footer Bottom Bar
-   -------------------------------------------------------------------------- */
+/* 7. Footer Bottom Bar */
 .footer-bottom {
   padding: 20px 0;
   background: #ffffff;
@@ -505,9 +485,7 @@
   box-shadow: 0 6px 18px rgba(211, 47, 47, 0.45);
 }
 
-/* --------------------------------------------------------------------------
-   8. Floating Action Buttons & Animations
-   -------------------------------------------------------------------------- */
+/* 8. Floating Action Buttons & Animations */
 @keyframes floatPulseRed {
   0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.55); }
   70% { box-shadow: 0 0 0 16px rgba(211, 47, 47, 0); }
@@ -527,43 +505,20 @@
 }
 
 /* Mobile Glass Dock (Default < 992px) */
+/* Base Floating Actions Setup */
 .floating-actions {
   position: fixed;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 50px;
-  padding: 6px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.8);
   z-index: 1040;
 }
 
 .float-btn {
-  flex: 1;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 8px 10px;
-  border-radius: 30px;
-  border: none;
   text-decoration: none !important;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
-}
-
-.float-btn:active {
-  transform: scale(0.94);
+  border: none;
 }
 
 .float-btn span {
@@ -574,71 +529,92 @@
 }
 
 .float-btn .icon-wrap {
-  width: 32px;
-  height: 32px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 15px;
-  margin-bottom: 0;
   flex-shrink: 0;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Mobile Specific Button Accents */
-.float-call {
-  background: rgba(211, 47, 47, 0.08);
-}
-.float-call span {
-  color: var(--theme-red);
-}
-.float-call .icon-wrap {
-  background: linear-gradient(135deg, #d32f2f 0%, #ef4444 100%);
-  color: #ffffff;
+/* Mobile Glass Dock (< 992px) */
+@media (max-width: 991px) {
+  .floating-actions {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 50px;
+    padding: 6px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .float-btn {
+    flex: 1;
+    flex-direction: row;
+    gap: 6px;
+    padding: 8px 10px;
+    border-radius: 30px;
+  }
+
+  .float-btn:active {
+    transform: scale(0.94);
+  }
+
+  .float-btn .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .float-call {
+    background: rgba(211, 47, 47, 0.08);
+  }
+  .float-call span { color: var(--theme-red); }
+  .float-call .icon-wrap { background: linear-gradient(135deg, #d32f2f 0%, #ef4444 100%); color: #ffffff; }
+
+  .float-quote {
+    background: linear-gradient(135deg, #ffb300 0%, #f59e0b 100%);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+  }
+  .float-quote span { color: #0f172a; }
+  .float-quote .icon-wrap { background: #0f172a; color: #ffb300; }
+
+  .float-whatsapp {
+    background: rgba(37, 211, 102, 0.1);
+  }
+  .float-whatsapp span { color: #059669; }
+  .float-whatsapp .icon-wrap { background: linear-gradient(135deg, #25d366 0%, #10b981 100%); color: #ffffff; }
 }
 
-.float-quote {
-  background: linear-gradient(135deg, #ffb300 0%, #f59e0b 100%);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
-}
-.float-quote span {
-  color: #0f172a;
-}
-.float-quote .icon-wrap {
-  background: #0f172a;
-  color: #ffb300;
-}
-
-.float-whatsapp {
-  background: rgba(37, 211, 102, 0.1);
-}
-.float-whatsapp span {
-  color: #059669;
-}
-.float-whatsapp .icon-wrap {
-  background: linear-gradient(135deg, #25d366 0%, #10b981 100%);
-  color: #ffffff;
-}
-
-/* Desktop Floating Stack */
+/* Desktop Floating Stack (>= 992px) */
 @media (min-width: 992px) {
   .floating-actions {
-    position: fixed;
     bottom: 35px;
-    left: auto;
     right: 25px;
+    left: auto;
     width: auto;
+    display: flex;
     flex-direction: column;
     gap: 16px;
-    background: transparent;
-    box-shadow: none;
-    border: none;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
   }
 
   .float-btn {
     flex-direction: row;
     align-items: center;
-    border: none;
     padding: 0;
     gap: 12px;
     background: transparent !important;
@@ -646,21 +622,20 @@
   }
 
   .float-btn span {
-    background: rgba(15, 23, 42, 0.88);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    position: absolute;
+    right: 62px;
+    background: rgba(15, 23, 42, 0.92);
     color: #ffffff;
-    padding: 7px 16px;
-    border-radius: 30px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
-    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.3px;
     opacity: 0;
-    transform: translateX(12px) scale(0.95);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(10px) scale(0.95);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    order: -1;
     white-space: nowrap;
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
@@ -671,30 +646,39 @@
   }
 
   .float-btn .icon-wrap {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 0;
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .float-call .icon-wrap {
+    background: linear-gradient(135deg, #d32f2f 0%, #ef4444 100%);
+    color: #ffffff;
     box-shadow: 0 8px 22px rgba(211, 47, 47, 0.45);
+    animation: floatPulseRed 2.5s infinite;
   }
+
   .float-quote .icon-wrap {
+    background: linear-gradient(135deg, #ffb300 0%, #f59e0b 100%);
+    color: #0f172a;
     box-shadow: 0 8px 22px rgba(255, 179, 0, 0.45);
+    animation: floatPulseYellow 2.5s infinite 1.6s;
   }
+
   .float-whatsapp .icon-wrap {
+    background: linear-gradient(135deg, #25d366 0%, #10b981 100%);
+    color: #ffffff;
     box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+    animation: floatPulseGreen 2.5s infinite 0.8s;
   }
 
   .float-btn:hover .icon-wrap {
-    transform: scale(1.14) rotate(6deg);
+    transform: scale(1.12) rotate(5deg);
   }
 }
 
-/* --------------------------------------------------------------------------
-   9. Responsive Adaptations
-   -------------------------------------------------------------------------- */
+/* 9. Responsive Adaptations */
 @media (max-width: 991px) {
   .footer-top-card {
     flex-direction: column;
