@@ -9,8 +9,8 @@
 .contact-modal-result { font-weight: 600; }
 
 /* Contacts page */
-.contact-title-primary { color: #073c91; }
-.contact-icon-box { width: 60px; height: 60px; font-size: 1.5rem; background: rgba(7, 60, 145, 0.1); color: #073c91; }
+.contact-title-primary { color: var(--theme-red); }
+.contact-section .contact-icon-box, .contact-page-info .contact-icon-box { width: 46px; height: 46px; font-size: 1.2rem; border-radius: 10px; background: rgba(211, 47, 47, 0.08); border: 1px solid rgba(211, 47, 47, 0.15); color: var(--theme-red); display: grid; place-items: center; flex-shrink: 0; }
 .contact-icon-box-success { width: 60px; height: 60px; font-size: 1.5rem; background: rgba(25, 135, 84, 0.1); color: #198754; }
 .contact-icon-box-warning { width: 60px; height: 60px; font-size: 1.5rem; background: rgba(255, 193, 7, 0.1); color: #ffc107; }
 .contact-border-warning { border-color: #ffb800 !important; }
