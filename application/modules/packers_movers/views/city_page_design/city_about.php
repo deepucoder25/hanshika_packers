@@ -75,17 +75,17 @@ include 'city_content.php';
                                 
                                 <!-- Box 1: Top Right Main Truck Loading Box -->
                                 <div class="abt-collage-main">
-                                    <img src="<?= base_url('assets/images/about/abt_truck_loading.jpg') ?>" alt="Hanshika Packers Truck Loading in <?= htmlspecialchars($city) ?>" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about3.jpg') ?>" alt="Hanshika Packers Truck Loading in <?= htmlspecialchars($city) ?>" loading="lazy">
                                 </div>
 
                                 <!-- Box 2: Bottom Left Golden Border Box -->
                                 <div class="abt-collage-left">
-                                    <img src="<?= base_url('assets/images/about/abt_packing_furniture.jpg') ?>" alt="Hanshika Packers Furniture Packing" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about2.jpg') ?>" alt="Hanshika Packers Furniture Packing" loading="lazy">
                                 </div>
 
                                 <!-- Box 3: Bottom Right Tall Vertical Box -->
                                 <div class="abt-collage-right">
-                                    <img src="<?= base_url('assets/images/about/abt_team_inventory.jpg') ?>" alt="Hanshika Packers Inventory Supervisor" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about1.jpg') ?>" alt="Hanshika Packers Inventory Supervisor" loading="lazy">
                                 </div>
 
                                 <!-- Floating Shield Pill Badge -->
@@ -112,6 +112,46 @@ include 'city_content.php';
                 </div>
             </div>
         </div>
+
+        <!-- 2. LOWER SECTION: SEO CONTENT BOX, MAP, REVIEWS & FAQ (col-lg-8) + SIDEBAR (col-lg-4) -->
+        <div class="row g-4 mb-5">
+            
+            <!-- LEFT: SEO Content Box, Map, Reviews & FAQ (col-lg-8) -->
+            <div class="col-lg-8">
+                
+                <!-- NEW ATTRACTIVE SEO-FRIENDLY CONTENT BOX BEFORE MAP -->
+                <div class="pm-seo-card mb-4">
+                    <div class="pm-seo-header mb-3">
+                        <span class="pm-seo-badge">
+                            <i class="bi bi-award-fill text-warning me-1"></i> TOP RATED RELOCATION SERVICE IN <?= strtoupper(htmlspecialchars($city)) ?>
+                        </span>
+                        
+                    </div>
+
+                    <div class="pm-seo-body"> 
+                      <?= $htmlcontent1 ?>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="pm-city-map my-4">
+                    <?php include 'city_map.php'; ?>
+                </div>
+
+                <!-- Reviews & FAQ Accordion -->
+                <div class="mt-4">
+                    <?php include 'city_reviews.php'; ?>
+                    <?php include 'city_faq.php'; ?>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: SIDEBAR (col-lg-4) -->
+            <div class="col-lg-4">
+                <?php include 'city_siderbar.php'; ?>
+            </div>
+
+        </div><!-- /row -->
 
         <!-- Dynamic Services Section based on City -->
         <?php 

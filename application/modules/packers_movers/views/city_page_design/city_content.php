@@ -23,38 +23,17 @@ if (strtolower($city) == "") {
             </p>
    ";
    $htmlcontent1 = "
-    <!-- What Makes Relocation Different -->
-        <div class='city-content-card mt-4'>
-          <h3 class='city-section-title-sm'>What Makes Local Relocation in  $city Different?</h3>
-          <p>Every city has its own moving challenges. In <strong> $city</strong>, monsoon season means extra waterproof wrapping is necessary for wooden furniture and electronics. Some residential areas also have limited parking access for larger trucks, so arranging a local tempo becomes important.</p>
-          <p>That's why families looking for <strong>Best Packers and Movers in  $city</strong> prefer experienced movers instead of random transport vendors. Timing coordination, building permissions, unloading sequence, and proper carton labeling save a lot of confusion later.</p>
-
-          <!-- Services List -->
-          <h3 class='city-section-title-sm mt-4'>Services Available for Household, Office & Vehicles in  $city</h3>
-          <p> $company3  handles a wide range of relocation needs:</p>
-          <ul class='city-checklist'>
-            <li><i class='bi bi-check2-circle'></i> Household relocation in  $city</li>
-            <li><i class='bi bi-check2-circle'></i> Office and commercial shifting</li>
-            <li><i class='bi bi-check2-circle'></i> Bike and car transportation</li>
-            <li><i class='bi bi-check2-circle'></i> Local moving within  $city</li>
-            <li><i class='bi bi-check2-circle'></i> Storage and warehouse support</li>
-            <li><i class='bi bi-check2-circle'></i> Loading and unloading assistance</li>
-          </ul>
-          <p>Many customers searching for <strong>Relocating Services Near Me in  $city</strong> also ask about part-load shifting. We handle that too — especially for students and small families. Temporary storage is also available for customers waiting for possession dates.</p>
-        </div>
-
-       
-
+                    <h3 class='pm-seo-title mt-2 mb-2'>
+                        Why Choose <span class='text-danger'> $company3</span> in $city?
+                    </h3>
+                    <p>
+                        Relocating your home or office in <strong>$city</strong> requires expertise, careful planning, and reliable execution. As the premier <strong>Packers and Movers in $city</strong>, $company3 brings over <strong>$yearsExperience years of hands-on experience</strong> in handling seamless local shifting, domestic relocation, and vehicle transportation.
+                    </p>
+                    <p>
+                        Whether you are moving across neighborhoods in <strong>$city</strong> or transferring to another state across India, our dedicated crew uses multi-layer heavy-duty packing (bubble wrap, waterproof sheets, corrugated boxes) to safeguard your furniture, electronics, and delicate glassware against damage.
+                    </p>
    ";
    $htmlcontent2 = "
-    <!-- Why Choose Professional Movers -->
-        <div class='city-content-card mt-4'>
-          <h3 class='city-section-title-sm'>Why Experienced Movers in  $city Make Relocation Easier</h3>
-          <p>Professional relocation is about timing, coordination, and packing quality. Fragile kitchen items? Packed separately. Glass tables? Corner protected. Washing machine installation? Done carefully after unloading.</p>
-          <p>A trained mover in <strong> $city</strong> understands apartment restrictions, society permissions, local transport timing, and road conditions — without unnecessary delays. Our staff uses lifting belts, furniture sliders, and layered wrapping for delicate items.</p>
-          <p>We keep pricing fair: transparent quotations, no hidden loading charges, and clear discussion before booking is confirmed.</p>
-
-      
-        </div>
+    
    ";
 } 
