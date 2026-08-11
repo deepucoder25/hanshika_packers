@@ -16,21 +16,11 @@ if (strtolower($city) == "") {
 } else {
    $htmlcontent = "
             <p>
-              Planning a move in <strong> $city </strong>? Here's what you need to know. Traffic delays, apartment timing rules, narrow society lanes, and sudden weather changes can turn a simple shifting job into a long day. That's exactly where <strong> $company3 </strong> helps. We've been handling household relocation, office shifting, bike transport, and local moving in  $city  with trained staff, proper packing methods, and practical planning that actually works on ground level.
+              Planning a move in <strong> $city </strong>? Here's what you need to know. Traffic delays, apartment timing rules, narrow society lanes, and sudden weather changes can turn a simple shifting job into a long day. That's exactly where <strong> $company3 </strong> helps. We've been handling household relocation, office shifting, bike transport, and local moving in $city with trained staff, proper packing methods, and practical planning that actually works on ground level.
             </p>
             <p>
-              People searching for <strong>Top Packers and Movers in  $city </strong> usually want one thing — safe shifting without confusion. Nobody wants broken furniture or late delivery calls after packing their whole house.
+              People searching for <strong>Top Packers and Movers in $city </strong> usually want one thing — safe shifting without confusion. Nobody wants broken furniture or late delivery calls after packing their whole house.
             </p>
-          </div>
-
-          <!-- Feature Pills -->
-          <div class='city-feature-pills'>
-            <div class='city-pill'><i class='bi bi-shield-check'></i> 100% Insured Shifting</div>
-            <div class='city-pill'><i class='bi bi-truck'></i> Real-time GPS Tracking</div>
-            <div class='city-pill'><i class='bi bi-box-seam'></i> Premium Multi-layer Packing</div>
-            <div class='city-pill'><i class='bi bi-clock-history'></i> On-Time Delivery Guaranteed</div>
-          </div>
-       
    ";
    $htmlcontent1 = "
     <!-- What Makes Relocation Different -->

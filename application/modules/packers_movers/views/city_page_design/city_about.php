@@ -2,70 +2,124 @@
 include 'city_content.php';
 ?>
 
+<section class="pm-city-details-section py-5">
+    <div class="container">
+        
+        <!-- 1. FULL-WIDTH (col-12) ABOUT US SECTION: 50% CONTENT + 50% IMAGE COLLAGE -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="abt-section-wrap">
+                    
+                    <div class="abt-grid-row">
+                        
+                        <!-- LEFT SIDE: Content, Heading, 3 Metrics & CTA Button (50% Width) -->
+                        <div class="abt-content-col">
+                            <div class="abt-eyebrow">
+                                <span class="abt-eyebrow-line"></span> ABOUT US
+                            </div>
+                            <h2 class="abt-title">
+                                Moving You Forward With <span class="text-danger">Care &amp; Trust</span> in <?= htmlspecialchars($city) ?>
+                            </h2>
+                            <div class="abt-dash-divider">
+                                <span class="abt-dash-red"></span>
+                                <span class="abt-dash-yellow"></span>
+                            </div>
+                            
+                            <div class="abt-prose">
+                                <?php echo $htmlcontent; ?>
+                            </div>
 
+                            <!-- 3 Metrics Card Box -->
+                            <div class="abt-metrics-card text-center">
+                                <div class="row g-2">
+                                    <div class="col-4 border-end">
+                                        <div class="abt-metric-circle-red">
+                                            <i class="bi bi-people-fill"></i>
+                                        </div>
+                                        <div class="abt-metric-num"><?= $happyClients ?></div>
+                                        <p class="abt-metric-label">Happy Customers</p>
+                                    </div>
+                                    <div class="col-4 border-end">
+                                        <div class="abt-metric-circle-yellow">
+                                            <i class="bi bi-award-fill"></i>
+                                        </div>
+                                        <div class="abt-metric-num"><?= $yearsExperience ?></div>
+                                        <p class="abt-metric-label">Years of Experience</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="abt-metric-circle-red">
+                                            <i class="bi bi-truck"></i>
+                                        </div>
+                                        <div class="abt-metric-num"><?= $successfullShifts ?></div>
+                                        <p class="abt-metric-label">Successful Moves</p>
+                                    </div>
+                                </div>
+                            </div>
 
-<section class="pm-city-details-section">
-  <div class="container">
-    <div class="row g-4">
+                            <!-- Red Action Button & Dot Matrix -->
+                            <div class="d-flex align-items-center gap-3">
+                                <a href="<?= site_url('about') ?>" class="btn abt-red-btn">
+                                    <span>KNOW MORE ABOUT US</span> <i class="bi bi-arrow-right-short fs-5"></i>
+                                </a>
+                                <div class="abt-dots-matrix d-none d-sm-grid">
+                                    <?php for($i=0; $i<15; $i++): ?>
+                                        <span class="abt-dot"></span>
+                                    <?php endfor; ?>
+                                </div>
+                            </div>
+                        </div>
 
-      <!-- ============ LEFT: MAIN CONTENT (col-lg-8) ============ -->
-      <div class="col-lg-8">
+                        <!-- RIGHT SIDE: 3 Overlapping Image Collage (50% Width) -->
+                        <div class="abt-collage-col">
+                            <div class="abt-collage-container">
+                                
+                                <!-- Box 1: Top Right Main Truck Loading Box -->
+                                <div class="abt-collage-main">
+                                    <img src="<?= base_url('assets/images/about/abt_truck_loading.jpg') ?>" alt="Hanshika Packers Truck Loading in <?= htmlspecialchars($city) ?>" loading="lazy">
+                                </div>
 
-        <!-- About Card -->
-        <div class="pm-city-content-card">
+                                <!-- Box 2: Bottom Left Golden Border Box -->
+                                <div class="abt-collage-left">
+                                    <img src="<?= base_url('assets/images/about/abt_packing_furniture.jpg') ?>" alt="Hanshika Packers Furniture Packing" loading="lazy">
+                                </div>
 
-          <!-- Eyebrow + Heading -->
-          <div class="pm-city-section-eyebrow">Top Rated Relocation</div>
-          <h2 class="pm-city-section-title">
-            
-            <span class="pm-city-accent"><?= $city ?></span>
-       Packers and Movers
-          </h2>
-<div class='city-prose'>
-       
-<?php echo $htmlcontent;?>  
-<div class="pm-city-map mt-2 mb-2">
-<?php include 'city_map.php';?>
-</div> 
-</div>  
+                                <!-- Box 3: Bottom Right Tall Vertical Box -->
+                                <div class="abt-collage-right">
+                                    <img src="<?= base_url('assets/images/about/abt_team_inventory.jpg') ?>" alt="Hanshika Packers Inventory Supervisor" loading="lazy">
+                                </div>
 
-    <?php echo $htmlcontent1;?>   
-    <?php echo $htmlcontent2;?>      
-       <?php include 'city_reviews.php'?>
+                                <!-- Floating Shield Pill Badge -->
+                                <div class="abt-collage-shield">
+                                    <i class="bi bi-shield-check text-danger fs-4"></i>
+                                    <div class="small fw-bold text-dark">
+                                        Your Belongings, <span class="text-danger fst-italic">Our Responsibility.</span>
+                                    </div>
+                                </div>
 
-    <?php include 'city_faq.php'?>
+                            </div>
+                        </div>
 
-      </div><!-- /col-lg-8 -->
+                    </div>
 
-      <!-- ============ RIGHT: SIDEBAR (col-lg-4) ============ -->
-      <div class="col-lg-4">
-        <?php include 'city_siderbar.php'; ?>
-      </div>
+                    <!-- Wavy Bottom Accent Background Curve -->
+                    <div class="abt-wave-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+                            <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#d32f2f" opacity="0.15"/>
+                            <path d="M0,35 C480,10 960,50 1440,25 L1440,60 L0,60 Z" fill="#d32f2f" opacity="0.8"/>
+                        </svg>
+                    </div>
 
-      </div><!-- /col-lg-4 -->
+                </div>
+            </div>
+        </div>
 
-    </div><!-- /row -->
+        <!-- Dynamic Services Section based on City -->
+        <?php 
+        $allowed_cities = [];
+        if (in_array(strtolower(trim($city)), $allowed_cities)): 
+        ?>
+            <?php include 'city_service.php'; ?>
+        <?php endif; ?>
 
-    <!-- Dynamic Services Section based on City -->
-    <?php 
-    $allowed_cities = [
-        // 'aurangabad', 'chandigarh', 'dhanbad', 'gwalior', 'hyderabad', 'jodhpur',
-        // 'kota', 'meerut', 'navi mumbai', 'rajkot', 'siliguri', 'vijayawada',
-        // 'ahmedabad', 'bangalore', 'chennai', 'faridabad', 'gurugram', 'indore',
-        // 'jamshedpur', 'mumbai', 'ranchi', 'surat', 'visakhapatnam',
-        // 'allahabad', 'bareilly', 'coimbatore', 'ghaziabad', 'howrah', 'jabalpur', 'ludhiana',
-        // 'nagpur', 'pune', 'solapur', 'vadodara',
-        // 'amritsar', 'bhopal', 'delhi', 'hubli-dharwad', 'jaipur', 'kolkata', 'madurai', 'nashik',
-        // 'raipur', 'srinagar'
-    ];
-    
-    if(in_array(strtolower(trim($city)), $allowed_cities)): 
-    ?>
-        <?php include 'city_service.php'; ?>
-    <?php endif; ?>
-
-  </div><!-- /container -->
+    </div><!-- /container -->
 </section>
-
-
-
