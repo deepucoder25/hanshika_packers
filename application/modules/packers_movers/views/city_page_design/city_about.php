@@ -75,17 +75,17 @@ include 'city_content.php';
                                 
                                 <!-- Box 1: Top Right Main Truck Loading Box -->
                                 <div class="abt-collage-main">
-                                    <img src="<?= base_url('assets/images/city_page/city_about3.jpg') ?>" alt="Hanshika Packers Truck Loading in <?= htmlspecialchars($city) ?>" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about3.jpg') ?>" alt="<?= $company3 ?> Truck Loading in <?= htmlspecialchars($city) ?>" loading="lazy">
                                 </div>
 
                                 <!-- Box 2: Bottom Left Golden Border Box -->
                                 <div class="abt-collage-left">
-                                    <img src="<?= base_url('assets/images/city_page/city_about2.jpg') ?>" alt="Hanshika Packers Furniture Packing" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about2.jpg') ?>" alt="<?= $company3 ?> Furniture Packing" loading="lazy">
                                 </div>
 
                                 <!-- Box 3: Bottom Right Tall Vertical Box -->
                                 <div class="abt-collage-right">
-                                    <img src="<?= base_url('assets/images/city_page/city_about1.jpg') ?>" alt="Hanshika Packers Inventory Supervisor" loading="lazy">
+                                    <img src="<?= base_url('assets/images/city_page/city_about1.jpg') ?>" alt="<?= $company3 ?> Inventory Supervisor" loading="lazy">
                                 </div>
 
                                 <!-- Floating Shield Pill Badge -->
@@ -113,7 +113,10 @@ include 'city_content.php';
             </div>
         </div>
 
-        <!-- 2. LOWER SECTION: SEO CONTENT BOX, MAP, REVIEWS & FAQ (col-lg-8) + SIDEBAR (col-lg-4) -->
+        <!-- 2. FULL-WIDTH 4-STEP RELOCATION PROCESS SECTION -->
+        <?php include 'city_process.php'; ?>
+
+        <!-- 3. LOWER SECTION: SEO CONTENT BOX, MAP, REVIEWS & FAQ (col-lg-8) + SIDEBAR (col-lg-4) -->
         <div class="row g-4 mb-5">
             
             <!-- LEFT: SEO Content Box, Map, Reviews & FAQ (col-lg-8) -->
