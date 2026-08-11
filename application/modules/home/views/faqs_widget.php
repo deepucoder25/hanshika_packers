@@ -45,8 +45,8 @@ $faqs = [
         
         <!-- Header Section (Uses Process Section Header Classes) -->
         <div class="text-center mb-5">
-            <!-- Yellow FAQ Badge Pill -->
-            <div class="faq-yellow-badge mb-3">
+            <!-- Solid Red Pill Badge -->
+            <div class="process-solid-badge mb-3">
                 <span>FAQS</span>
             </div>
 
@@ -56,12 +56,9 @@ $faqs = [
             </h2>
 
             <!-- Subtitle -->
-            <p class="process-lead-text mb-3">
+            <p class="process-lead-text mb-0">
                 Find answers to some of the common questions about our moving services.
             </p>
-
-            <!-- Red Underline Bar -->
-            <div class="faq-red-line-bar mx-auto"></div>
         </div>
 
         <!-- FAQ Main Content Row -->

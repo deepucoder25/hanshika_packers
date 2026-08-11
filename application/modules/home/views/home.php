@@ -1,10 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// Load the Services grid widget
-// $this->load->view('service_widget');
-
 // Load the About Us widget
 $this->load->view('about_widget');
+
+// Load the Services grid widget
+$this->load->view('service_widget');
 
 // Load the Process widget
 $this->load->view('process_widget');

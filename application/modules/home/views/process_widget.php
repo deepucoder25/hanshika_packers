@@ -289,5 +289,73 @@
             </div>
         </div>
 
+        <!-- Relevant Keywords Box (col-12) -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="process-keywords-box">
+                    <div class="keywords-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <h3 class="keywords-title mb-0">
+                            <i class="bi bi-tags-fill"></i>
+                            <span>Relevant Keywords</span>
+                        </h3>
+                        <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill font-small fw-semibold">
+                            <i class="bi bi-search me-1 text-red"></i> Most Searched Relocation Terms
+                        </span>
+                    </div>
+
+                    <div class="process-keywords-tags mt-3">
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-geo-alt-fill"></i> Movers and Packers Near Me
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-star-fill"></i> Best Packers and Movers
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-box-seam-fill"></i> Household Goods Shifting
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-map-fill"></i> Interstate Packers and Movers
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-tag-fill"></i> Cheap Packers and Movers
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-award-fill"></i> Top Relocation Company
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-house-door-fill"></i> Home Shifting Services
+                        </a>
+                        <a href="<?= site_url('office-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-building-fill"></i> Office Relocation Experts
+                        </a>
+                        <a href="<?= site_url('car-transportation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-car-front-fill"></i> Safe Car Transportation
+                        </a>
+                        <a href="<?= site_url('bike-transportation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-scooter"></i> Bike Courier & Transport
+                        </a>
+                        <a href="<?= site_url('packing-and-moving') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-box2-fill"></i> Packing and Moving Services
+                        </a>
+                        <a href="<?= site_url('loading-unloading') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-truck-flatbed"></i> Loading and Unloading
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-boxes"></i> Warehouse & Storage Solutions
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-door-open-fill"></i> Door to Door Relocation
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-currency-rupee"></i> Budget Shifting Services
+                        </a>
+                        <a href="<?= site_url('home-relocation') ?>" class="keyword-pill-tag">
+                            <i class="bi bi-pin-map-fill"></i> Local Packers and Movers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>

@@ -19,7 +19,7 @@ $companyName = isset($company3) ? $company3 : 'Hanshika Packers and Movers';
 
                     <!-- Main Section Title -->
                     <h2 class="rev-exact-title mb-3">
-                        What Our<br>
+                        What Our
                         <span class="text-yellow">Happy Customers</span> Say
                     </h2>
 

@@ -11,14 +11,13 @@
                 <div class="about-v2-content">
                     
                     <!-- Top Category Badge -->
-                    <div class="about-v2-badge">
-                        <i class="bi bi-shield-lock-fill me-2"></i>
+                    <div class="process-solid-badge mb-3">
                         <span>WHO WE ARE</span>
                     </div>
 
                     <!-- SEO Title -->
-                    <h2 class="about-v2-title mt-3 mb-3">
-                        Reliable Shifting &amp; Relocation Services by <span class="v2-highlight"><?= $company3 ?></span>
+                    <h2 class="process-heading text-start mb-3">
+                        Reliable Shifting &amp; Relocation Services by <span class="text-red"><?= $company3 ?></span>
                     </h2>
 
                     <!-- Descriptions -->
