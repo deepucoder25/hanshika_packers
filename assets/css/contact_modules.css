@@ -174,6 +174,810 @@
     content: "★";
 }
 
+/* ==========================================================================
+   CONTACT PAGE MODULE STYLES (contacts.php)
+   ========================================================================== */
+
+/* 1. Contact Page Container */
+.cnt-page-section {
+    background-color: #f8fafc;
+}
+
+/* 2. Unique 3-Column Top Contact Cards */
+.cnt-top-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px 26px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cnt-top-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gradient-theme-line, linear-gradient(90deg, #d32f2f 0%, #ffb300 50%, #d32f2f 100%));
+    opacity: 0.85;
+}
+
+.cnt-top-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(211, 47, 47, 0.3);
+    box-shadow: 0 18px 40px rgba(211, 47, 47, 0.1);
+}
+
+.cnt-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.cnt-badge-red {
+    background: rgba(211, 47, 47, 0.08);
+    color: var(--theme-red, #d32f2f);
+    border: 1px solid rgba(211, 47, 47, 0.2);
+}
+
+.cnt-badge-yellow {
+    background: rgba(255, 179, 0, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(255, 179, 0, 0.3);
+}
+
+.cnt-badge-dark {
+    background: rgba(13, 18, 29, 0.08);
+    color: var(--dark-bg, #0d121d);
+    border: 1px solid rgba(13, 18, 29, 0.2);
+}
+
+.cnt-card-icon-ring {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: rgba(211, 47, 47, 0.08);
+    border: 1px solid rgba(211, 47, 47, 0.2);
+    color: var(--theme-red, #d32f2f);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    transition: all 0.35s ease;
+}
+
+.cnt-top-card:hover .cnt-card-icon-ring {
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    color: #ffffff;
+    border-color: var(--theme-red, #d32f2f);
+    box-shadow: 0 8px 22px rgba(211, 47, 47, 0.35);
+    transform: scale(1.05);
+}
+
+.cnt-card-val {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dark-bg, #0d121d);
+    margin-bottom: 10px;
+    line-height: 1.35;
+    word-break: break-word;
+}
+
+.cnt-card-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.cnt-card-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cnt-btn-red {
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.cnt-btn-red:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(211, 47, 47, 0.45);
+    color: #ffffff !important;
+}
+
+.cnt-btn-green {
+    background: #16a34a;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+}
+
+.cnt-btn-green:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(22, 163, 74, 0.45);
+    color: #ffffff !important;
+}
+
+.cnt-card-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--theme-red, #d32f2f);
+    font-weight: 800;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.cnt-card-action-link:hover {
+    color: #991b1b;
+    gap: 12px;
+}
+
+/* 3. Form Card & Wavy Header */
+.cnt-form-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    overflow: hidden;
+}
+
+.cnt-wavy-header {
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    color: var(--white, #ffffff);
+    padding: 38px 30px 50px 30px;
+    position: relative;
+}
+
+.cnt-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: rgba(255, 179, 0, 0.2);
+    border: 1px solid rgba(255, 179, 0, 0.5);
+    color: var(--theme-yellow, #ffb300);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.cnt-header-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--white, #ffffff);
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.cnt-header-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.cnt-header-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.cnt-header-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 26px;
+}
+
+.cnt-form-body {
+    padding: 30px 30px 35px 30px;
+}
+
+/* Input Fields */
+.cnt-input-wrap {
+    position: relative;
+}
+
+.cnt-input-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: #475569;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.cnt-field-group {
+    position: relative;
+}
+
+.cnt-input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theme-red, #d32f2f);
+    font-size: 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cnt-field-group:has(textarea) .cnt-input-icon {
+    top: 16px;
+    transform: none;
+}
+
+.cnt-control {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    font-size: 14px;
+    color: var(--dark-bg, #0d121d);
+    font-weight: 500;
+    transition: all 0.25s ease;
+    box-shadow: none !important;
+}
+
+.cnt-control:focus {
+    border-color: var(--theme-red, #d32f2f);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.12) !important;
+}
+
+textarea.cnt-control {
+    min-height: 100px;
+    padding-top: 12px;
+    resize: vertical;
+}
+
+.cnt-submit-btn {
+    width: 100%;
+    background: var(--theme-yellow, #ffb300);
+    color: var(--dark-bg, #0d121d);
+    font-size: 1.05rem;
+    font-weight: 800;
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cnt-submit-btn:hover {
+    background: #ffa000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 179, 0, 0.6);
+    color: var(--dark-bg, #0d121d);
+}
+
+/* 4. Right Side Network & Map Showcase Cards */
+.cnt-side-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.cnt-side-card:last-child {
+    margin-bottom: 0;
+}
+
+.cnt-side-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark-bg, #0d121d);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cnt-side-title i {
+    color: var(--theme-red, #d32f2f);
+}
+
+.cnt-stat-pill {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.cnt-stat-num {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--theme-red, #d32f2f);
+    line-height: 1;
+}
+
+.cnt-stat-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.cnt-map-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    height: 240px;
+}
+
+.cnt-map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   CONSIGNMENT TRACKING PAGE MODULE STYLES (tracking.php)
+   ========================================================================== */
+
+/* 1. Page Container */
+.trk-page-section {
+    background-color: #f8fafc;
+    padding: 30px 0 50px 0;
+}
+
+/* 2. Main Tracking Search Card */
+.trk-search-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trk-search-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gradient-theme-line, linear-gradient(90deg, #d32f2f 0%, #ffb300 50%, #d32f2f 100%));
+}
+
+.trk-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 16px;
+    border-radius: 20px;
+    background: rgba(211, 47, 47, 0.08);
+    border: 1px solid rgba(211, 47, 47, 0.2);
+    color: var(--theme-red, #d32f2f);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.trk-main-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark-bg, #0d121d);
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.trk-subtitle {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 28px auto;
+}
+
+.trk-input-group {
+    position: relative;
+    flex-grow: 1;
+}
+
+.trk-input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theme-red, #d32f2f);
+    font-size: 1.2rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trk-input {
+    width: 100%;
+    height: 56px;
+    padding-left: 55px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark-bg, #0d121d);
+    transition: all 0.25s ease;
+    box-shadow: none !important;
+}
+
+.trk-input:focus {
+    border-color: var(--theme-red, #d32f2f);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.12) !important;
+}
+
+.trk-search-btn {
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 30px;
+    background: var(--theme-yellow, #ffb300);
+    color: var(--dark-bg, #0d121d) !important;
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.trk-search-btn:hover {
+    background: #ffa000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 179, 0, 0.6);
+}
+
+.trk-clear-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+    border: none;
+}
+
+.trk-clear-btn:hover {
+    background: var(--theme-red, #d32f2f);
+    color: #ffffff;
+}
+
+/* 3. Tracking Result Cards */
+.trk-details-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    overflow: hidden;
+}
+
+.trk-details-header {
+    background: linear-gradient(135deg, var(--dark-bg, #0d121d) 0%, #1e293b 100%);
+    border-top: 4px solid var(--theme-red, #d32f2f);
+    color: var(--white, #ffffff);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trk-details-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trk-summary-pill {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 16px 18px;
+    border: 1px solid #e2e8f0;
+    height: 100%;
+}
+
+.trk-summary-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--theme-red, #d32f2f);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.trk-summary-val {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--dark-bg, #0d121d);
+    margin: 0;
+}
+
+/* 4. Stepper & Progress Card Redesign */
+.trk-process-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.03);
+    padding: 32px 28px;
+}
+
+.trk-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.trk-progress-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--dark-bg, #0d121d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trk-progress-track {
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.contact-progress-bar {
+    height: 100%;
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    border-radius: 20px;
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 4 Step Cards Grid */
+.trk-step-box {
+    background: #f8fafc;
+    border-radius: 18px;
+    border: 1px solid #cbd5e1;
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.35s ease;
+    height: 100%;
+    position: relative;
+}
+
+.trk-step-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.trk-step-no {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    color: #64748b;
+}
+
+.trk-step-chk {
+    font-size: 16px;
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.trk-step-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin: 0 auto 12px auto;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.trk-step-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--dark-bg, #0d121d);
+    margin-bottom: 8px;
+}
+
+.contact-step-date {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #475569;
+    background: #ffffff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: inline-block;
+    min-height: 24px;
+    line-height: 1.4;
+}
+
+.contact-step-date:empty {
+    display: none;
+}
+
+/* Completed Step Card State */
+.contact-step.completed .trk-step-box {
+    background: rgba(211, 47, 47, 0.03);
+    border-color: rgba(211, 47, 47, 0.3);
+}
+
+.contact-step.completed .trk-step-no {
+    color: var(--theme-red, #d32f2f);
+}
+
+.contact-step.completed .trk-step-chk {
+    color: var(--theme-red, #d32f2f);
+}
+
+.contact-step.completed .trk-step-icon-wrap {
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    border-color: var(--theme-red, #d32f2f);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(211, 47, 47, 0.3);
+}
+
+.contact-step.completed .contact-step-date {
+    background: rgba(211, 47, 47, 0.08);
+    color: var(--theme-red, #d32f2f);
+    border-color: rgba(211, 47, 47, 0.2);
+}
+
+/* Active Step Card State */
+.contact-step.active .trk-step-box {
+    background: rgba(255, 179, 0, 0.08);
+    border-color: var(--theme-yellow, #ffb300);
+    box-shadow: 0 8px 25px rgba(255, 179, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.contact-step.active .trk-step-no {
+    color: #d97706;
+}
+
+.contact-step.active .trk-step-chk {
+    color: var(--theme-yellow, #ffb300);
+}
+
+.contact-step.active .trk-step-icon-wrap {
+    background: var(--theme-yellow, #ffb300);
+    border-color: var(--theme-yellow, #ffb300);
+    color: var(--dark-bg, #0d121d);
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+}
+
+/* 5. Tracking History Table */
+.trk-table-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.trk-table-wrap .table {
+    margin-bottom: 0;
+}
+
+.trk-table-wrap thead th {
+    background: var(--dark-bg, #0d121d);
+    color: var(--white, #ffffff);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    padding: 14px 18px;
+    border: none;
+}
+
+.trk-table-wrap tbody td {
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* 6. Support Callout Card */
+.trk-support-box {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 575px) {
+    .trk-search-card {
+        padding: 26px 20px;
+    }
+    .trk-main-title {
+        font-size: 1.5rem;
+    }
+    .trk-input {
+        height: 50px;
+        font-size: 14px;
+    }
+    .trk-search-btn {
+        height: 50px;
+        padding: 0 20px;
+    }
+    .contact-step-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+    .contact-step-label {
+        font-size: 11px;
+    }
+    .cnt-wavy-header {
+        padding: 26px 20px 42px 20px;
+    }
+    .cnt-header-title {
+        font-size: 1.45rem;
+    }
+    .cnt-form-body {
+        padding: 22px 18px 26px 18px;
+    }
+    .cnt-service-grid {
+        grid-template-columns: 1fr;
+    }
+    .cnt-submit-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
 .rvw-stars-v3 input:checked ~ label,
 .rvw-stars-v3 label:hover,
 .rvw-stars-v3 label:hover ~ label {
