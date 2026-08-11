@@ -338,12 +338,12 @@
                         Contact <strong><?= $company3 ?></strong> today for a free doorstep survey and written quotation. Experience 100% transparent pricing and damage-free delivery.
                     </p>
                 </div>
-                <div class="col-lg-4 text-lg-end text-center d-flex flex-wrap gap-3 justify-content-center justify-content-lg-end">
+                <div class="col-lg-4 text-lg-end text-center d-flex flex-nowrap gap-2 gap-sm-3 justify-content-center justify-content-lg-end">
                     <button type="button" class="btn chs-cta-btn" data-bs-toggle="modal" data-bs-target="#qteModal">
-                        <i class="bi bi-calculator-fill me-2"></i> Get Free Quote
+                        <i class="bi bi-calculator-fill me-1 me-sm-2"></i> Get Free Quote
                     </button>
                     <a href="<?= $phonehtml ?>" class="btn chs-cta-outline-btn">
-                        <i class="bi bi-telephone-fill me-2"></i> <?= $phone ?>
+                        <i class="bi bi-telephone-fill me-1 me-sm-2"></i> <?= $phone ?>
                     </a>
                 </div>
             </div>

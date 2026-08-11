@@ -907,6 +907,7 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .abt-cta-btn:hover {
@@ -927,6 +928,7 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .abt-cta-outline-btn:hover {
@@ -1215,6 +1217,7 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .chs-cta-btn:hover {
@@ -1235,10 +1238,21 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .chs-cta-outline-btn:hover {
     background: rgba(255, 255, 255, 0.3);
     color: #ffffff !important;
     border-color: #ffffff;
+}
+
+@media (max-width: 575px) {
+    .abt-cta-btn,
+    .abt-cta-outline-btn,
+    .chs-cta-btn,
+    .chs-cta-outline-btn {
+        padding: 10px 14px !important;
+        font-size: 12.5px !important;
+    }
 }
