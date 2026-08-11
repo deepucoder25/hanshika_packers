@@ -13,16 +13,45 @@ class Reviews extends MX_Controller
     {
         $this->load->view('data');
     }
+
+    function toggle_sample()
+    {
+        $file = FCPATH . 'assets/hide_sample_reviews.txt';
+        if (file_exists($file)) {
+            @unlink($file);
+            echo json_encode(['status' => 'show', 'hidden' => false, 'msg' => 'Default sample reviews are now VISIBLE on website.']);
+        } else {
+            @file_put_contents($file, '1');
+            echo json_encode(['status' => 'hide', 'hidden' => true, 'msg' => 'Default sample reviews are now HIDDEN from website.']);
+        }
+    }
+
+    function check_sample_status()
+    {
+        $file = FCPATH . 'assets/hide_sample_reviews.txt';
+        $hidden = file_exists($file);
+        $this->output->set_content_type('application/json')->set_output(json_encode(['hidden' => $hidden]));
+    }
     function save()
     {
-        if($_GET['id']){
-            $where['r_id']=$_GET['id'];
-            $data['status']=$_GET['status'];
-            echo $this->mdl_reviews->update_data($where,$data);
-        }
-        else 
+        if (isset($_GET['id']) && $_GET['id'] !== '') {
+            $where['r_id'] = $_GET['id'];
+            $data['status'] = $_GET['status'];
+            
+            // Sync status update directly to SQLite application/database.php
+            try {
+                $sqlite_path = FCPATH . 'application/database.php';
+                if (file_exists($sqlite_path)) {
+                    $pdo = new PDO('sqlite:' . $sqlite_path);
+                    $stmt = $pdo->prepare("UPDATE reviews SET status = :status WHERE r_id = :r_id");
+                    $stmt->execute([':status' => $_GET['status'], ':r_id' => $_GET['id']]);
+                }
+            } catch (\Throwable $e) {}
+
+            echo $this->mdl_reviews->update_data($where, $data);
+        } else {
             echo "invalid Request";
-        
+        }
     }
     function update_data()
     {
@@ -51,19 +80,47 @@ class Reviews extends MX_Controller
     {
         if (isset($_GET['id']) && $_GET['id'])
         {
-            $this->db->where('r_id', $_GET['id']);
-            foreach ($this->db->get("reviews")->result() as $row)
-            {
-                if (!empty($row->r_img)) {
-                    $image_delete_path1="./assets/uploads/reviewimg/$row->r_img";
-                    $image_delete_path2="./assets/uploads/reviewimg/thumb/$row->r_img";
-                    if (file_exists($image_delete_path1)) unlink($image_delete_path1);
-                    if (file_exists($image_delete_path2)) unlink($image_delete_path2);
+            $del_id = $_GET['id'];
+
+            // 1. Delete from SQLite database application/database.php
+            try {
+                $sqlite_path = FCPATH . 'application/database.php';
+                if (file_exists($sqlite_path)) {
+                    $pdo = new PDO('sqlite:' . $sqlite_path);
+                    $stmt = $pdo->prepare("DELETE FROM reviews WHERE r_id = :id");
+                    $stmt->execute([':id' => $del_id]);
                 }
-            }
-            $where['r_id']=$_GET['id'];
-            echo $this->mdl_reviews->delete_data($where);
-        }else echo "Not Deleted";
+            } catch (\Throwable $e) {}
+
+            // 2. Delete from CI db model
+            try {
+                $where['r_id'] = $del_id;
+                $this->mdl_reviews->delete_data($where);
+            } catch (\Throwable $e) {}
+
+            // 3. Clear from admin_data/reviews.json
+            try {
+                $json_file = FCPATH . 'admin_data/reviews.json';
+                if (file_exists($json_file)) {
+                    $json_raw = file_get_contents($json_file);
+                    $json_arr = json_decode($json_raw, true);
+                    if (is_array($json_arr)) {
+                        $new_json = [];
+                        foreach ($json_arr as $item) {
+                            $item_id = isset($item['id']) ? $item['id'] : (isset($item['r_id']) ? $item['r_id'] : null);
+                            if ($item_id != $del_id) {
+                                $new_json[] = $item;
+                            }
+                        }
+                        file_put_contents($json_file, json_encode($new_json, JSON_PRETTY_PRINT));
+                    }
+                }
+            } catch (\Throwable $e) {}
+
+            echo "Deleted";
+        } else {
+            echo "Not Deleted";
+        }
     }
     function view_data()
     {

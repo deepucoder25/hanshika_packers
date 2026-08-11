@@ -33,9 +33,39 @@ class About extends MX_Controller
 
     function testimonials()
     {
-        $data['title'] = "Customer Reviews & Testimonials | " . $this->comp['company3'];
-        $data['description'] = "Read genuine customer reviews and success stories for household shifting, office relocation, and bike/car transport services provided by " . $this->comp['company3'] . ".";
-        $data['keywords'] = "customer reviews, relocation testimonials, packers movers feedback, client ratings, " . strtolower($this->comp['company3']);
+        $reviews = null;
+        try {
+            @$this->load->database();
+            if (isset($this->db) && is_object($this->db) && @$this->db->conn_id) {
+                $this->db->order_by('r_id', 'desc');
+                $this->db->where('status', 1);
+                $reviews = @$this->db->get('reviews');
+            }
+        } catch (\Throwable $e) {
+            $reviews = null;
+        } catch (\Exception $e) {
+            $reviews = null;
+        }
+
+        if (!$reviews || (is_object($reviews) && method_exists($reviews, 'num_rows') && $reviews->num_rows() == 0)) {
+            try {
+                $sqlite_path = FCPATH . 'application/database.php';
+                if (file_exists($sqlite_path)) {
+                    $pdo = new PDO('sqlite:' . $sqlite_path);
+                    $stmt = $pdo->query("SELECT * FROM reviews WHERE status = 1 OR status = '1' ORDER BY r_id DESC");
+                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    if ($rows) {
+                        $reviews = $rows;
+                    }
+                }
+            } catch (\Throwable $ex) {}
+        }
+
+        $data['reviews'] = $reviews;
+
+        $data['title'] = "Customer Testimonials & Ratings | " . $this->comp['company3'];
+        $data['description'] = "Read genuine client testimonials and feedback about " . $this->comp['company3'] . ". See how we deliver hassle-free home, vehicle, and office relocations across India.";
+        $data['keywords'] = "packers movers reviews, customer testimonials, shifting service feedback, client ratings";
         $data['module'] = "about";
         $data['view_file'] = "testimonials";
         echo Modules::run('template/layout2', $data);

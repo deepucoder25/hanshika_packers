@@ -94,9 +94,32 @@ class Reviews extends MX_Controller
         $this->_process_review_submission();
     }
 
+    private function _ensure_table_exists() {
+        try {
+            @$this->load->database();
+            if (isset($this->db) && is_object($this->db) && @$this->db->conn_id) {
+                $sql = "CREATE TABLE IF NOT EXISTS `reviews` (
+                    `r_id` INT(11) NOT NULL AUTO_INCREMENT,
+                    `name` VARCHAR(255) NULL,
+                    `email` VARCHAR(255) NULL,
+                    `r_title` VARCHAR(255) NULL,
+                    `r_desc` TEXT NULL,
+                    `stars` INT(11) DEFAULT 5,
+                    `status` TINYINT(1) DEFAULT 1,
+                    `b_id` INT(11) DEFAULT 0,
+                    `r_img` TEXT NULL,
+                    `views` INT(11) DEFAULT 0,
+                    `posted_date` DATETIME NULL,
+                    PRIMARY KEY (`r_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+                @$this->db->query($sql);
+            }
+        } catch (\Throwable $e) {}
+    }
+
     private function _process_review_submission() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->load->database();
+            $this->_ensure_table_exists();
             
             $redirect_url = isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : site_url('testimonials');
             
@@ -115,7 +138,7 @@ class Reviews extends MX_Controller
 
             if ($file_key && !empty($_FILES[$file_key]['name'])) {
                 $upload_path = FCPATH . 'assets/images/reviews/';
-                if (!is_dir($upload_path)) mkdir($upload_path, 0777, true);
+                if (!is_dir($upload_path)) @mkdir($upload_path, 0777, true);
                 
                 $files = $_FILES[$file_key];
                 $is_multiple = is_array($files['name']);
@@ -146,21 +169,106 @@ class Reviews extends MX_Controller
             }
             
             $r_img_val = implode(',', $uploaded_images);
+            $posted_date = date('Y-m-d H:i:s');
             
-            $data = array(
-                'name' => $name,
-                'email' => $email,
-                'r_title' => $city,
-                'r_desc' => $desc,
-                'stars' => $stars,
-                'status' => 1, // Active / auto-approved to display directly on website
-                'b_id' => 0,
-                'r_img' => $r_img_val,
-                'views' => 0,
-                'posted_date' => date('Y-m-d H:i:s')
-            );
-            
-            $this->db->insert('reviews', $data);
+            // 1. Save to SQLite / Database (application/database.php)
+            try {
+                $sqlite_path = FCPATH . 'application/database.php';
+                if (file_exists($sqlite_path)) {
+                    $pdo = new PDO('sqlite:' . $sqlite_path);
+                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    
+                    // Create table if not exists
+                    $sql_create = "CREATE TABLE IF NOT EXISTS reviews (
+                        r_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        b_id INTEGER DEFAULT 0,
+                        name TEXT,
+                        email TEXT,
+                        r_title TEXT,
+                        r_desc TEXT,
+                        r_img TEXT,
+                        stars INTEGER DEFAULT 5,
+                        views INTEGER DEFAULT 0,
+                        status INTEGER DEFAULT 1,
+                        posted_date DATETIME,
+                        timestamp DATETIME,
+                        r_type TEXT DEFAULT 'Customer',
+                        admin_reply TEXT,
+                        city TEXT
+                    );";
+                    $pdo->exec($sql_create);
+
+                    $sql_insert = "INSERT INTO reviews (b_id, name, email, r_title, r_desc, r_img, stars, views, status, posted_date, timestamp, r_type, admin_reply) VALUES (:b_id, :name, :email, :r_title, :r_desc, :r_img, :stars, :views, :status, :posted_date, :timestamp, :r_type, :admin_reply)";
+                    $stmt = $pdo->prepare($sql_insert);
+                    $stmt->execute([
+                        ':b_id' => 0,
+                        ':name' => $name,
+                        ':email' => $email,
+                        ':r_title' => $city,
+                        ':r_desc' => $desc,
+                        ':r_img' => $r_img_val,
+                        ':stars' => (int)$stars,
+                        ':views' => 0,
+                        ':status' => 1,
+                        ':posted_date' => $posted_date,
+                        ':timestamp' => $posted_date,
+                        ':r_type' => 'Customer',
+                        ':admin_reply' => ''
+                    ]);
+                }
+            } catch (\Throwable $e) {
+                try {
+                    @$this->load->database();
+                    if (isset($this->db) && is_object($this->db) && @$this->db->conn_id) {
+                        $db_data = array(
+                            'b_id' => 0,
+                            'name' => $name,
+                            'email' => $email,
+                            'r_title' => $city,
+                            'r_desc' => $desc,
+                            'r_img' => $r_img_val,
+                            'stars' => (int)$stars,
+                            'views' => 0,
+                            'status' => 1,
+                            'posted_date' => $posted_date,
+                            'timestamp' => $posted_date,
+                            'r_type' => 'Customer',
+                            'admin_reply' => ''
+                        );
+                        @$this->db->insert('reviews', $db_data);
+                    }
+                } catch (\Throwable $ex) {}
+            }
+
+            // 2. Save to admin_data/reviews.json for flat-file / admin panel storage
+            try {
+                $json_dir = FCPATH . 'admin_data';
+                if (!is_dir($json_dir)) {
+                    @mkdir($json_dir, 0777, true);
+                }
+                $json_file = $json_dir . '/reviews.json';
+                $current_json = [];
+                if (file_exists($json_file)) {
+                    $current_json = json_decode(file_get_contents($json_file), true) ?: [];
+                }
+                $json_entry = array(
+                    'id' => time(),
+                    'name' => $name,
+                    'email' => $email,
+                    'title' => $city,
+                    'r_title' => $city,
+                    'desc' => $desc,
+                    'r_desc' => $desc,
+                    'stars' => $stars,
+                    'rating' => $stars,
+                    'status' => 1,
+                    'r_img' => $r_img_val,
+                    'created_at' => $posted_date,
+                    'posted_date' => $posted_date
+                );
+                $current_json[] = $json_entry;
+                file_put_contents($json_file, json_encode($current_json, JSON_PRETTY_PRINT));
+            } catch (\Throwable $e) {}
             
             if ($this->input->is_ajax_request() || (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')) {
                 header('Content-Type: application/json');

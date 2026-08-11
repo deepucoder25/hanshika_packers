@@ -25,7 +25,7 @@
 						<th>Posted on</th>
 						<th>Status</th>
 						<th style="width:100px">Timestamp</th>
-						<th style="width:140px">Action</th>
+						<th style="width:200px">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,11 +43,14 @@
 						</td>
 						<td>{{y.pd}}</td>
 						<td>
-						  <div style="height:25px;width:25px;border-radius:50%;background:red" ng-if="y.st=='0'"></div>
-	            		  <div style="height:25px;width:25px;border-radius:50%;background:green" ng-if="y.st=='1'"></div>
+						  <div style="height:25px;width:25px;border-radius:50%;background:red;cursor:pointer;" title="Click to Show" ng-if="y.st=='0' || y.st==0" ng-click="toggleStatus(y.r_id, '1')"></div>
+	            		  <div style="height:25px;width:25px;border-radius:50%;background:green;cursor:pointer;" title="Click to Hide" ng-if="y.st=='1' || y.st==1" ng-click="toggleStatus(y.r_id, '0')"></div>
 						</td>
 						<td>{{y.tm}}</td>
 						<td>
+						  <button class="btn btn-xs" ng-class="(y.st == '1' || y.st == 1) ? 'btn-warning' : 'btn-success'" style="margin-top:6px;" ng-click="toggleStatus(y.r_id, (y.st == '1' || y.st == 1) ? '0' : '1')">
+						    <i class="fa" ng-class="(y.st == '1' || y.st == 1) ? 'fa-eye-slash' : 'fa-eye'"></i> {{ (y.st == '1' || y.st == 1) ? 'Hide' : 'Show' }}
+						  </button>
 						  <button class="btn btn-xs btn-primary" style="margin-top:6px;" ng-click="openEdit(y)">Reply</button>
 						  <button class="btn btn-xs btn-danger" style="margin-top:6px;" ng-click="deleteReview(y.r_id)">Delete</button>
 						</td>

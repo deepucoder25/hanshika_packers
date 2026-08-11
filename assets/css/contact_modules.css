@@ -40,22 +40,208 @@
 #resultquotemodal { margin-top: 10px; text-align: center; font-weight: 600; }
 @media (max-width: 576px) { #quotemodal { padding: 15px; } .contact-form-header { padding: 12px 15px; } .contact-form-header span { font-size: 18px; } }
 
-/* Review Modal */
-.contact-review-form-label { font-weight: 600; font-size: 0.9rem; color: #475569; margin-bottom: 8px; }
-.contact-review-form-control { border-radius: 10px; border: 1px solid #e2e8f0; padding: 12px 15px; }
-.contact-review-form-control:focus { border-color: #ff6600; box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.1); outline: none; }
-.contact-rating-select { display: flex; gap: 10px; margin-bottom: 20px; }
-.contact-rating-item { cursor: pointer; font-size: 24px; color: #cbd5e1; transition: 0.2s; }
-.contact-rating-item.active { color: #f59e0b; }
-.contact-btn-submit-review { background: #ff6600; color: #fff; border: none; padding: 15px 30px; border-radius: 10px; font-weight: 700; width: 100%; transition: 0.3s; margin-top: 10px; }
-.contact-btn-submit-review:hover { background: #e65c00; transform: translateY(-2px); color: #fff; }
+/* ==========================================================================
+   REVIEW MODAL V3 STYLES (reviews/reviewmodal.php)
+   ========================================================================== */
+.custom-rvw-modal-v3 .modal-dialog {
+    max-width: 680px;
+}
 
-.contact-review-modal-content { border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-.contact-review-modal-title { font-weight: 800; color: #001846; }
-.contact-review-rating-wrap { margin-top: -4px; }
-.contact-review-emoji { font-size: 28px; line-height: 1; }
-.contact-review-number { font-weight: 700; color: #475569; font-size: 1.1rem; }
-.contact-review-total { color: #94a3b8; font-weight: 600; }
+.custom-rvw-modal-v3 .modal-content {
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+}
+
+.rvw-header-hero {
+    background: linear-gradient(135deg, var(--dark-bg, #0d121d) 0%, #1e293b 100%);
+    border-top: 5px solid var(--theme-red, #d32f2f);
+}
+
+.rvw-hero-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+}
+
+.rvw-hdr-badge {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 800;
+    color: var(--theme-yellow, #ffb300);
+    letter-spacing: 0.8px;
+}
+
+.rvw-close-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease;
+}
+
+.rvw-close-circle:hover {
+    background: var(--theme-red, #d32f2f);
+    transform: rotate(90deg);
+}
+
+.rvw-group .rvw-lbl {
+    font-size: 11px;
+    font-weight: 900;
+    color: #475569;
+    letter-spacing: 0.6px;
+    margin-bottom: 7px;
+    display: block;
+}
+
+.rvw-input-group {
+    display: flex;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.rvw-input-group:focus-within {
+    border-color: var(--theme-red, #d32f2f);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.12);
+}
+
+.rvw-input-icon {
+    width: 44px;
+    display: grid;
+    place-items: center;
+    color: var(--theme-red, #d32f2f);
+    font-size: 1.05rem;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.rvw-field {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    color: #0f172a;
+    width: 100%;
+}
+
+.rvw-area {
+    min-height: 95px;
+    resize: vertical;
+}
+
+/* Star Rating Card V3 */
+.rvw-rating-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    min-height: 48px;
+}
+
+.rvw-stars-v3 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4px;
+}
+
+.rvw-stars-v3 input {
+    display: none;
+}
+
+.rvw-stars-v3 label {
+    cursor: pointer;
+    font-size: 26px;
+    color: #cbd5e1;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.rvw-stars-v3 label::before {
+    content: "★";
+}
+
+.rvw-stars-v3 input:checked ~ label,
+.rvw-stars-v3 label:hover,
+.rvw-stars-v3 label:hover ~ label {
+    color: var(--theme-yellow, #ffb300);
+}
+
+.rvw-stars-v3 label:hover {
+    transform: scale(1.25);
+}
+
+/* Dropzone Card */
+.rvw-dropzone {
+    background: rgba(211, 47, 47, 0.02);
+    border: 2px dashed rgba(211, 47, 47, 0.25);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.rvw-dropzone:hover {
+    background: rgba(211, 47, 47, 0.05);
+    border-color: var(--theme-red, #d32f2f);
+}
+
+.rvw-dropzone-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #ffffff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.1);
+    flex-shrink: 0;
+}
+
+/* Buttons */
+.btn-submit-review-v3 {
+    background: var(--gradient-red, linear-gradient(135deg, #d32f2f 0%, #991b1b 100%));
+    color: #ffffff !important;
+    font-size: 13.5px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    padding: 13px 28px;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-submit-review-v3:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(211, 47, 47, 0.5);
+}
+
+.btn-reset-v3 {
+    background: #f1f5f9;
+    color: #475569 !important;
+    font-size: 13.5px;
+    font-weight: 800;
+    padding: 13px 22px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.25s ease;
+}
+
+.btn-reset-v3:hover {
+    background: #e2e8f0;
+    color: #0f172a !important;
+}
 
 /* Tracking */
 .contact-tracking-details-card { display: none; }
