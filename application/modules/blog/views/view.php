@@ -33,7 +33,7 @@
                             <?php elseif ($image_file && file_exists(FCPATH . 'uploads/blogs/' . $image_file)): ?>
                                 <img src="<?= base_url('uploads/blogs/' . $image_file) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Blog Cover" class="img-fluid w-100 blog-details-img" loading="lazy">
                             <?php else: ?>
-                                <img src="<?= base_url('assets/images/about/packers_movers.jpg') ?>" alt="<?= htmlspecialchars(isset($company3) ? $company3 : 'Relocation') ?> Relocation Guide" class="img-fluid w-100 blog-details-img" loading="lazy">
+                                <img src="<?= base_url('assets/images/about/packers_movers.jpg') ?>" alt="<?= $company3 ?> Relocation Guide" class="img-fluid w-100 blog-details-img" loading="lazy">
                             <?php endif; ?>
                         </div>
                         
@@ -166,7 +166,7 @@
     },
     "publisher": {
         "@type": "Organization",
-        "name": "<?= isset($company3) ? $company3 : 'MyCompany' ?>",
+        "name": "<?= $company3 ?>",
         "logo": {
             "@type": "ImageObject",
             "url": "<?= base_url('assets/images/logo/logo.png') ?>"

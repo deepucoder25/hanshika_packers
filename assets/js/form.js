@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 font-size: 0.75rem !important;
                 font-weight: bold !important;
                 margin-top: 4px !important;
-                margin-bottom: 2px !important;
+                margin-bottom: 4px !important;
                 text-align: left !important;
                 padding-left: 4px !important;
                 display: flex !important;
@@ -31,8 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.head.appendChild(style);
     }
 
+    // Helper to clear errors for a field
+    function clearFieldError(inputEl) {
+        if (!inputEl) return;
+        inputEl.classList.remove("input-error-highlight");
+        
+        const wrapper = inputEl.closest(".form-group-wrap") || 
+                        inputEl.closest(".form-icon-wrap") || 
+                        inputEl.closest(".form-icon") || 
+                        inputEl.closest(".cnt-field-group") || 
+                        inputEl.closest(".field-wrap") || 
+                        inputEl.closest(".input-group") ||
+                        inputEl.parentElement;
+
+        if (wrapper && wrapper.nextElementSibling && wrapper.nextElementSibling.classList.contains("field-error-msg")) {
+            wrapper.nextElementSibling.remove();
+        }
+        if (inputEl.nextElementSibling && inputEl.nextElementSibling.classList.contains("field-error-msg")) {
+            inputEl.nextElementSibling.remove();
+        }
+    }
+
     // Attach submit handler to ALL forms with class .ajax-form
     document.querySelectorAll(".ajax-form").forEach(form => {
+
+        // Real-time error clearing when user types or changes input
+        form.querySelectorAll("input, select, textarea").forEach(field => {
+            field.addEventListener("input", () => clearFieldError(field));
+            field.addEventListener("change", () => clearFieldError(field));
+        });
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -60,12 +87,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 errorDiv.className = "field-error-msg";
                 errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ${message}`;
                 
-                // Find icon wrapper if present (.form-icon-wrap, .form-icon, .field-wrap, .input-group)
-                const iconWrap = inputEl.closest(".form-icon-wrap") || inputEl.closest(".form-icon") || inputEl.closest(".field-wrap") || inputEl.closest(".input-group");
+                // Find icon wrapper if present (.form-group-wrap, .form-icon-wrap, .form-icon, .cnt-field-group, .field-wrap, .input-group)
+                const iconWrap = inputEl.closest(".form-group-wrap") || 
+                                 inputEl.closest(".form-icon-wrap") || 
+                                 inputEl.closest(".form-icon") || 
+                                 inputEl.closest(".cnt-field-group") || 
+                                 inputEl.closest(".field-wrap") || 
+                                 inputEl.closest(".input-group");
+
                 if (iconWrap) {
                     iconWrap.after(errorDiv);
                 } else if (inputEl.parentElement) {
-                    inputEl.after(errorDiv);
+                    const parent = inputEl.parentElement;
+                    if (parent && parent.querySelector("i, svg, .field-icon, .cnt-input-icon")) {
+                        parent.after(errorDiv);
+                    } else {
+                        inputEl.after(errorDiv);
+                    }
                 }
             }
 
