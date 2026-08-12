@@ -74,9 +74,9 @@
           <!-- Floating Rating Badge (Top Center Desktop / Below Call Row Mobile) -->
           <div class="hero-rating-badge d-flex">
             <div class="rating-avatars">
-              <img src="https://i.pravatar.cc/100?img=32" alt="Customer" class="avatar-img">
-              <img src="https://i.pravatar.cc/100?img=47" alt="Customer" class="avatar-img">
-              <img src="https://i.pravatar.cc/100?img=12" alt="Customer" class="avatar-img">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Customer" class="avatar-img" loading="lazy">
+              <img src="https://i.pravatar.cc/100?img=47" alt="Customer" class="avatar-img" loading="lazy">
+              <img src="https://i.pravatar.cc/100?img=12" alt="Customer" class="avatar-img" loading="lazy">
               <span class="rating-score-pill"><?= $ratingValue ?></span>
             </div>
             <div class="rating-text-block">

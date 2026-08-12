@@ -77,7 +77,7 @@
                                 <div class="position-relative">
                                     <a href="<?= $link ?>">
                                         <img src="<?= $img ?>" class="card-img-top blog-card-img"
-                                            alt="<?= htmlspecialchars($b->title) ?>">
+                                            alt="<?= htmlspecialchars($b->title) ?>" loading="lazy">
                                     </a>
                                     <div
                                         class="position-absolute top-0 end-0 bg-warning text-dark fw-bold px-3 py-2 rounded-bottom-start shadow-sm blog-date-badge">

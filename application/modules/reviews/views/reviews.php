@@ -77,7 +77,7 @@
                                                 <?php foreach($images as $img) { 
                                                     if(trim($img) !== '') {
                                                 ?>
-                                                    <img src="<?= base_url(trim($img)) ?>" alt="Review Image" class="img-thumbnail shadow-sm review-img-clickable" onclick="openImageModal(this.src)" style="height: 60px; width: 60px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; cursor: pointer;">
+                                                    <img src="<?= base_url(trim($img)) ?>" alt="Review Image" class="img-thumbnail shadow-sm review-img-clickable" onclick="openImageModal(this.src)" style="height: 60px; width: 60px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; cursor: pointer;" loading="lazy">
                                                 <?php } } ?>
                                             </div>
                                         <?php } ?>
@@ -129,7 +129,7 @@
         <button type="button" class="btn-close bg-white rounded-circle p-2" data-bs-dismiss="modal" aria-label="Close" style="opacity: 1;"></button>
       </div>
       <div class="modal-body text-center p-0">
-        <img id="fullImage" src="" class="img-fluid rounded shadow-lg" style="max-height: 85vh; object-fit: contain; max-width: 100%;">
+        <img id="fullImage" src="" alt="Enlarged Review Image" class="img-fluid rounded shadow-lg" style="max-height: 85vh; object-fit: contain; max-width: 100%;" loading="lazy">
       </div>
     </div>
   </div>

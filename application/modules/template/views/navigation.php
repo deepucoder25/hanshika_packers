@@ -289,7 +289,7 @@
       <!-- Mobile Brand & Quick Action Header Card -->
       <div class="mega-brand-card">
         <div class="d-flex align-items-center justify-content-between mb-2">
-          <img src="<?= base_url() ?>assets/images/logo/logo.png" alt="<?= $company3 ?> Packers and Movers" class="mega-logo">
+          <img src="<?= base_url() ?>assets/images/logo/logo.png" alt="<?= $company3 ?> Packers and Movers" class="mega-logo" loading="lazy">
           <span class="mega-badge"><i class="bi bi-patch-check-fill me-1"></i> ISO Certified</span>
         </div>
         <div class="mega-call-btn-container">

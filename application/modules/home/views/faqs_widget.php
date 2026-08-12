@@ -68,8 +68,8 @@ $faqs = [
             <div class="col-lg-5 col-12">
                 <div class="faq-image-wrapper text-center">
                     <img src="<?= base_url('assets/images/home_modules/fags.jpg') ?>" 
-                         alt="Hanshika Packers and Movers Boxes" 
-                         class="img-fluid faq-boxes-img shadow-sm" />
+                         alt="<?= $company3 ?> Boxes" 
+                         class="img-fluid faq-boxes-img shadow-sm" loading="lazy" />
                 </div>
             </div>
 
