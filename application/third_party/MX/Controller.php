@@ -69,12 +69,12 @@ class MX_Controller
         $this->comp['linkedinhtml'] = "";
         $this->comp['whatsapphtml'] = "https://wa.me/916381336217";
 
-        $this->comp['address'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency, Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['address1'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency";
-        $this->comp['address2'] = "Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['addressRegion'] = "Mumbai";
-        $this->comp['postalCode'] = "421302";
-        $this->comp['companystate'] = "Maharashtra";
+        $this->comp['address'] = "Santoshi Nagar, Rajiv Road, Ward No. 5, Siliguri, West Bengal – 734005";
+        $this->comp['address1'] = "Santoshi Nagar, Rajiv Road, Ward No. 5";
+        $this->comp['address2'] = "Ward No. 5, Siliguri, West Bengal – 734005";
+        $this->comp['addressRegion'] = "Siliguri";
+        $this->comp['postalCode'] = "734005";
+        $this->comp['companystate'] = "West Bengal";
         $this->comp['themeColor'] = "#d32f2f";
 
         $this->comp['experience'] = "5+";
