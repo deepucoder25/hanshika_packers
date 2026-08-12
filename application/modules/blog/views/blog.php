@@ -35,8 +35,15 @@
                         $custom_slug = !empty($b->slug) ? $b->slug : rtrim(str_replace("--", "-", urlencode(str_replace(" ", "-", str_replace(",", " ", $b->title)))), "-");
                         $link = strtolower(site_url('blog/' . $custom_slug));
 
-                        $image_path = FCPATH . 'uploads/blogs/' . $b->image;
-                        $img = ($b->image && file_exists($image_path)) ? base_url("uploads/blogs/{$b->image}") : base_url('assets/images/about/packers_movers.jpg');
+                        $image_path1 = FCPATH . 'assets/uploads/blog/' . $b->image;
+                        $image_path2 = FCPATH . 'uploads/blogs/' . $b->image;
+                        if (!empty($b->image) && file_exists($image_path1) && is_file($image_path1)) {
+                            $img = base_url("assets/uploads/blog/{$b->image}");
+                        } elseif (!empty($b->image) && file_exists($image_path2) && is_file($image_path2)) {
+                            $img = base_url("uploads/blogs/{$b->image}");
+                        } else {
+                            $img = base_url('assets/images/about/packers_movers.jpg');
+                        }
 
                         // Handle date parsing
                         $created_at = isset($b->created_at) ? $b->created_at : date('Y-m-d H:i:s');

@@ -25,9 +25,13 @@
                         <!-- Image -->
                         <div class="mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
                             <?php 
-                            $image_path = FCPATH . 'uploads/blogs/' . @$query[0]->image;
-                            if (@$query[0]->image && file_exists($image_path)): ?>
-                                <img src="<?= base_url('uploads/blogs/' . @$query[0]->image) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Blog Cover" class="img-fluid w-100 blog-details-img" loading="lazy">
+                            $image_file = @$query[0]->image;
+                            if (!empty($img)): ?>
+                                <img src="<?= $img ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Blog Cover" class="img-fluid w-100 blog-details-img" loading="lazy">
+                            <?php elseif ($image_file && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)): ?>
+                                <img src="<?= base_url('assets/uploads/blog/' . $image_file) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Blog Cover" class="img-fluid w-100 blog-details-img" loading="lazy">
+                            <?php elseif ($image_file && file_exists(FCPATH . 'uploads/blogs/' . $image_file)): ?>
+                                <img src="<?= base_url('uploads/blogs/' . $image_file) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Blog Cover" class="img-fluid w-100 blog-details-img" loading="lazy">
                             <?php else: ?>
                                 <img src="<?= base_url('assets/images/about/packers_movers.jpg') ?>" alt="<?= htmlspecialchars(isset($company3) ? $company3 : 'Relocation') ?> Relocation Guide" class="img-fluid w-100 blog-details-img" loading="lazy">
                             <?php endif; ?>
@@ -67,8 +71,15 @@
                                     <?php foreach ($recent_posts as $post_arr): $post = (object)$post_arr; ?>
                                         <?php
                                         $image_file = $post->image;
-                                        $full_path = FCPATH . 'uploads/blogs/' . $image_file;
-                                        $imagePath = ($image_file && file_exists($full_path)) ? base_url('uploads/blogs/' . $image_file) : base_url('assets/images/about/packers_movers.jpg');
+                                        $path1 = FCPATH . 'assets/uploads/blog/' . $image_file;
+                                        $path2 = FCPATH . 'uploads/blogs/' . $image_file;
+                                        if ($image_file && file_exists($path1)) {
+                                            $imagePath = base_url('assets/uploads/blog/' . $image_file);
+                                        } elseif ($image_file && file_exists($path2)) {
+                                            $imagePath = base_url('uploads/blogs/' . $image_file);
+                                        } else {
+                                            $imagePath = base_url('assets/images/about/packers_movers.jpg');
+                                        }
                                         $custom_slug = !empty($post->slug) ? $post->slug : rtrim(str_replace("--", "-", urlencode(str_replace(" ", "-", str_replace(",", " ", $post->title)))), "-");
                                         ?>
                                         <a href="<?= site_url('blog/'.$custom_slug) ?>" class="d-flex align-items-center gap-3 mb-3 text-decoration-none post-link-item blog-post-link-item">

@@ -72,12 +72,16 @@ class Blog extends MX_Controller
             if (isset($_POST['b_id']) && $_POST['b_id'])//update
             {
                 $where['b_id']=$_POST['b_id'];
-                echo $this->mdl_blog->update_data($where,$data);
+                $res = $this->mdl_blog->update_data($where,$data);
+                $this->sync_blogs_json();
+                echo $res;
             }
             else //add
             {
                
-                echo $this->mdl_blog->add_data($data);
+                $res = $this->mdl_blog->add_data($data);
+                $this->sync_blogs_json();
+                echo $res;
             }
         }
         else
@@ -113,32 +117,50 @@ class Blog extends MX_Controller
                  $image_delete_path2="./assets/uploads/blog/thumb/$row->image";
             }
             if (!empty($image_delete_path1) && file_exists($image_delete_path1)) {
-                unlink($image_delete_path1);
+                @unlink($image_delete_path1);
             }
             if (!empty($image_delete_path2) && file_exists($image_delete_path2)) {
-                unlink($image_delete_path2);
+                @unlink($image_delete_path2);
             }
            
             $where['b_id']=$_GET['id'];
-            echo $this->mdl_blog->delete_data($where) ? "1" : "0";
+            $res = $this->mdl_blog->delete_data($where) ? "1" : "0";
+            $this->sync_blogs_json();
+            echo $res;
         }else echo "Not Deleted";
     }
-        function image_upload($title)
-        {
-            $folder="blog";
-            // upload coder starts here
-            $config['upload_path'] = './assets/temp';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg';
-            $config['new_image'] = "./assets/uploads/$folder/";
-            $config['min_width']=100;
-        
-            $rand_number = mt_rand(0, 85);
-            $timestamp = time();
-//             $title = str_replace(" ", "_", $title);
-            $config['file_name'] =  $rand_number . $timestamp;
-        
-            $config['overwrite'] = false;
-            $config['remove_spaces'] = true;
+
+    private function sync_blogs_json()
+    {
+        try {
+            $dir = FCPATH . 'admin_data';
+            if (!is_dir($dir)) {
+                @mkdir($dir, 0755, true);
+            }
+            $query = $this->db->order_by('b_id', 'DESC')->get('blog');
+            if ($query && $query->num_rows() > 0) {
+                $rows = $query->result_array();
+                @file_put_contents($dir . '/blogs.json', json_encode($rows, JSON_PRETTY_PRINT));
+            } else {
+                @file_put_contents($dir . '/blogs.json', json_encode([]));
+            }
+        } catch (\Throwable $e) {}
+    }
+
+    function image_upload($title)
+    {
+        $folder="blog";
+        // upload coder starts here
+        $config['upload_path'] = './assets/temp';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['new_image'] = "./assets/uploads/$folder/";
+        $config['min_width']=100;
+
+        $rand_number = mt_rand(0, 85);
+        $timestamp = time();
+        $config['file_name'] =  $rand_number . $timestamp;
+        $config['overwrite'] = false;
+        $config['remove_spaces'] = true;
         
             $this->load->library('upload', $config);
             if (! $this->upload->do_upload('image'))

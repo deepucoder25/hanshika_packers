@@ -15,16 +15,26 @@ class Blog extends MX_Controller {
 
     private function loadBlogs() {
         $blogs = [];
+        $seen_ids = [];
 
-        // 1. Fetch from Database Table 'blog' safely with try-catch (prevents HTTP 500 on live host if DB driver/SQLite is missing)
+        // 1. Fetch from Database Table 'blog' safely with try-catch
         try {
-            @$this->load->database();
-            if (isset($this->db) && is_object($this->db) && @$this->db->conn_id) {
-                if (@$this->db->table_exists('blog')) {
+            $CI =& get_instance();
+            if (!isset($this->db) || !is_object($this->db) || !@$this->db->conn_id) {
+                $CI->load->database();
+                if (isset($CI->db)) {
+                    $this->db = $CI->db;
+                }
+            }
+
+            if (isset($this->db) && is_object($this->db) && !empty($this->db->conn_id)) {
+                if ($this->db->table_exists('blog')) {
                     $this->db->order_by('b_id', 'DESC');
-                    $query = @$this->db->get('blog');
+                    $query = $this->db->get('blog');
+
                     if ($query && $query->num_rows() > 0) {
                         foreach ($query->result_array() as $row) {
+                            $id = $row['b_id'] ?? 0;
                             $title = !empty($row['title']) ? $row['title'] : (!empty($row['main_title']) ? $row['main_title'] : 'Relocation Guide');
                             $slug = !empty($row['slug']) ? $row['slug'] : $this->slugify($title);
                             $raw_date = !empty($row['timestamp']) ? $row['timestamp'] : (!empty($row['date']) ? $row['date'] : date('Y-m-d H:i:s'));
@@ -32,8 +42,8 @@ class Blog extends MX_Controller {
                             $content = !empty($row['content']) ? $row['content'] : $desc;
 
                             $blogs[] = [
-                                'id' => $row['b_id'] ?? 0,
-                                'b_id' => $row['b_id'] ?? 0,
+                                'id' => $id,
+                                'b_id' => $id,
                                 'title' => $title,
                                 'main_title' => $row['main_title'] ?? $title,
                                 'slug' => $slug,
@@ -47,13 +57,14 @@ class Blog extends MX_Controller {
                                 'meta_desc' => $row['meta_desc'] ?? '',
                                 'tags' => $row['tags'] ?? ''
                             ];
+                            if ($id) {
+                                $seen_ids[$id] = true;
+                            }
                         }
                     }
                 }
             }
         } catch (\Throwable $e) {
-            // DB connection failure or driver issue, fail gracefully
-        } catch (\Exception $e) {
             // DB connection failure or driver issue, fail gracefully
         }
 
@@ -62,14 +73,18 @@ class Blog extends MX_Controller {
         if (file_exists($path)) {
             $json_blogs = json_decode(file_get_contents($path), true) ?: [];
             foreach ($json_blogs as $jb) {
+                $id = $jb['id'] ?? $jb['b_id'] ?? 0;
+                if ($id && isset($seen_ids[$id])) {
+                    continue; // skip duplicate if already loaded from DB
+                }
                 $title = !empty($jb['title']) ? $jb['title'] : (!empty($jb['main_title']) ? $jb['main_title'] : 'Relocation Guide');
                 $slug = !empty($jb['slug']) ? $jb['slug'] : $this->slugify($title);
                 $desc = $jb['description'] ?? '';
                 $content = !empty($jb['content']) ? $jb['content'] : $desc;
 
                 $blogs[] = [
-                    'id' => $jb['id'] ?? $jb['b_id'] ?? 0,
-                    'b_id' => $jb['b_id'] ?? $jb['id'] ?? 0,
+                    'id' => $id,
+                    'b_id' => $id,
                     'title' => $title,
                     'main_title' => $jb['main_title'] ?? $title,
                     'slug' => $slug,
