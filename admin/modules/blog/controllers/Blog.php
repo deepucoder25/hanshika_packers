@@ -73,14 +73,12 @@ class Blog extends MX_Controller
             {
                 $where['b_id']=$_POST['b_id'];
                 $res = $this->mdl_blog->update_data($where,$data);
-                $this->sync_blogs_json();
                 echo $res;
             }
             else //add
             {
                
                 $res = $this->mdl_blog->add_data($data);
-                $this->sync_blogs_json();
                 echo $res;
             }
         }
@@ -125,26 +123,8 @@ class Blog extends MX_Controller
            
             $where['b_id']=$_GET['id'];
             $res = $this->mdl_blog->delete_data($where) ? "1" : "0";
-            $this->sync_blogs_json();
             echo $res;
         }else echo "Not Deleted";
-    }
-
-    private function sync_blogs_json()
-    {
-        try {
-            $dir = FCPATH . 'admin_data';
-            if (!is_dir($dir)) {
-                @mkdir($dir, 0755, true);
-            }
-            $query = $this->db->order_by('b_id', 'DESC')->get('blog');
-            if ($query && $query->num_rows() > 0) {
-                $rows = $query->result_array();
-                @file_put_contents($dir . '/blogs.json', json_encode($rows, JSON_PRETTY_PRINT));
-            } else {
-                @file_put_contents($dir . '/blogs.json', json_encode([]));
-            }
-        } catch (\Throwable $e) {}
     }
 
     function image_upload($title)

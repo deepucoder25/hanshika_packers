@@ -68,36 +68,6 @@ class Blog extends MX_Controller {
             // DB connection failure or driver issue, fail gracefully
         }
 
-        // 2. Fetch from admin_data/blogs.json if exists
-        $path = FCPATH . 'admin_data/blogs.json';
-        if (file_exists($path)) {
-            $json_blogs = json_decode(file_get_contents($path), true) ?: [];
-            foreach ($json_blogs as $jb) {
-                $id = $jb['id'] ?? $jb['b_id'] ?? 0;
-                if ($id && isset($seen_ids[$id])) {
-                    continue; // skip duplicate if already loaded from DB
-                }
-                $title = !empty($jb['title']) ? $jb['title'] : (!empty($jb['main_title']) ? $jb['main_title'] : 'Relocation Guide');
-                $slug = !empty($jb['slug']) ? $jb['slug'] : $this->slugify($title);
-                $desc = $jb['description'] ?? '';
-                $content = !empty($jb['content']) ? $jb['content'] : $desc;
-
-                $blogs[] = [
-                    'id' => $id,
-                    'b_id' => $id,
-                    'title' => $title,
-                    'main_title' => $jb['main_title'] ?? $title,
-                    'slug' => $slug,
-                    'description' => $desc,
-                    'content' => $content,
-                    'date' => $jb['date'] ?? date('d/m/Y'),
-                    'created_at' => $jb['created_at'] ?? date('Y-m-d H:i:s'),
-                    'image' => $jb['image'] ?? '',
-                    'author' => $jb['author'] ?? 'Admin'
-                ];
-            }
-        }
-
         return $blogs;
     }
 

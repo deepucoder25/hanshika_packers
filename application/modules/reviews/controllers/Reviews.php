@@ -240,35 +240,7 @@ class Reviews extends MX_Controller
                 } catch (\Throwable $ex) {}
             }
 
-            // 2. Save to admin_data/reviews.json for flat-file / admin panel storage
-            try {
-                $json_dir = FCPATH . 'admin_data';
-                if (!is_dir($json_dir)) {
-                    @mkdir($json_dir, 0777, true);
-                }
-                $json_file = $json_dir . '/reviews.json';
-                $current_json = [];
-                if (file_exists($json_file)) {
-                    $current_json = json_decode(file_get_contents($json_file), true) ?: [];
-                }
-                $json_entry = array(
-                    'id' => time(),
-                    'name' => $name,
-                    'email' => $email,
-                    'title' => $city,
-                    'r_title' => $city,
-                    'desc' => $desc,
-                    'r_desc' => $desc,
-                    'stars' => $stars,
-                    'rating' => $stars,
-                    'status' => 1,
-                    'r_img' => $r_img_val,
-                    'created_at' => $posted_date,
-                    'posted_date' => $posted_date
-                );
-                $current_json[] = $json_entry;
-                file_put_contents($json_file, json_encode($current_json, JSON_PRETTY_PRINT));
-            } catch (\Throwable $e) {}
+
             
             if ($this->input->is_ajax_request() || (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')) {
                 header('Content-Type: application/json');

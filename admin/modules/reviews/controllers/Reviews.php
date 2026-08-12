@@ -98,25 +98,6 @@ class Reviews extends MX_Controller
                 $this->mdl_reviews->delete_data($where);
             } catch (\Throwable $e) {}
 
-            // 3. Clear from admin_data/reviews.json
-            try {
-                $json_file = FCPATH . 'admin_data/reviews.json';
-                if (file_exists($json_file)) {
-                    $json_raw = file_get_contents($json_file);
-                    $json_arr = json_decode($json_raw, true);
-                    if (is_array($json_arr)) {
-                        $new_json = [];
-                        foreach ($json_arr as $item) {
-                            $item_id = isset($item['id']) ? $item['id'] : (isset($item['r_id']) ? $item['r_id'] : null);
-                            if ($item_id != $del_id) {
-                                $new_json[] = $item;
-                            }
-                        }
-                        file_put_contents($json_file, json_encode($new_json, JSON_PRETTY_PRINT));
-                    }
-                }
-            } catch (\Throwable $e) {}
-
             echo "Deleted";
         } else {
             echo "Not Deleted";
