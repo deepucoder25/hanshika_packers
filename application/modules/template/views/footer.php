@@ -31,7 +31,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
             <i class="bi bi-file-earmark-text-fill"></i>
           </div>
           <div class="cta-text-content">
-            <span class="cta-main-title">Get a Free <strong class="text-danger">Moving Quote</strong></span>
+            <span class="cta-main-title">Get a Free <strong style="color: var(--theme-blue, #003A6A);">Moving Quote</strong></span>
           </div>
           <div class="cta-arrow-graphic d-none d-md-block">
             <svg width="45" height="24" viewBox="0 0 45 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,14 +93,14 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <div class="footer-widget-col">
             <h5 class="widget-title">QUICK LINKS</h5>
             <ul class="widget-list list-icons">
-              <li><a href="<?= site_url() ?>"><i class="bi bi-house-door-fill text-danger"></i> Home</a></li>
-              <li><a href="<?= site_url('about-us') ?>"><i class="bi bi-building text-danger"></i> About Us</a></li>
-              <li><a href="<?= site_url('why-choose-us') ?>"><i class="bi bi-patch-check-fill text-danger"></i> Why Choose Us</a></li>
-              <li><a href="<?= site_url('faqs') ?>"><i class="bi bi-question-circle-fill text-danger"></i> FAQ</a></li>
-              <li><a href="<?= site_url('testimonials') ?>"><i class="bi bi-chat-square-quote-fill text-danger"></i> Testimonials</a></li>
-              <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-geo-alt-fill text-danger"></i> Locations</a></li>
-              <li><a href="<?= site_url('blog') ?>"><i class="bi bi-journal-richtext text-danger"></i> Blog</a></li>
-              <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-telephone-outbound-fill text-danger"></i> Contact Us</a></li>
+              <li><a href="<?= site_url() ?>"><i class="bi bi-house-door-fill" style="color: var(--theme-blue, #003A6A);"></i> Home</a></li>
+              <li><a href="<?= site_url('about-us') ?>"><i class="bi bi-building" style="color: var(--theme-blue, #003A6A);"></i> About Us</a></li>
+              <li><a href="<?= site_url('why-choose-us') ?>"><i class="bi bi-patch-check-fill" style="color: var(--theme-blue, #003A6A);"></i> Why Choose Us</a></li>
+              <li><a href="<?= site_url('faqs') ?>"><i class="bi bi-question-circle-fill" style="color: var(--theme-blue, #003A6A);"></i> FAQ</a></li>
+              <li><a href="<?= site_url('testimonials') ?>"><i class="bi bi-chat-square-quote-fill" style="color: var(--theme-blue, #003A6A);"></i> Testimonials</a></li>
+              <li><a href="<?= site_url('our-branches') ?>"><i class="bi bi-geo-alt-fill" style="color: var(--theme-blue, #003A6A);"></i> Locations</a></li>
+              <li><a href="<?= site_url('blog') ?>"><i class="bi bi-journal-richtext" style="color: var(--theme-blue, #003A6A);"></i> Blog</a></li>
+              <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-telephone-outbound-fill" style="color: var(--theme-blue, #003A6A);"></i> Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -110,12 +110,12 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <div class="footer-widget-col">
             <h5 class="widget-title">OUR SERVICES</h5>
             <ul class="widget-list list-icons">
-              <li><a href="<?= site_url('home-relocation') ?>"><i class="bi bi-house-door-fill text-warning"></i> Home Shifting</a></li>
-              <li><a href="<?= site_url('office-relocation') ?>"><i class="bi bi-briefcase-fill text-warning"></i> Office Shifting</a></li>
-              <li><a href="<?= site_url('car-transportation') ?>"><i class="bi bi-car-front-fill text-warning"></i> Car Transportation</a></li>
-              <li><a href="<?= site_url('bike-transportation') ?>"><i class="bi bi-scooter text-warning"></i> Bike Transportation</a></li>
-              <li><a href="<?= site_url('packing-and-moving') ?>"><i class="bi bi-box-seam-fill text-warning"></i> Packing &amp; Moving</a></li>
-              <li><a href="<?= site_url('loading-unloading') ?>"><i class="bi bi-truck text-warning"></i> Loading &amp; Unloading</a></li>
+              <li><a href="<?= site_url('home-relocation') ?>"><i class="bi bi-house-door-fill" style="color: var(--theme-yellow, #FF6A00);"></i> Home Shifting</a></li>
+              <li><a href="<?= site_url('office-relocation') ?>"><i class="bi bi-briefcase-fill" style="color: var(--theme-yellow, #FF6A00);"></i> Office Shifting</a></li>
+              <li><a href="<?= site_url('car-transportation') ?>"><i class="bi bi-car-front-fill" style="color: var(--theme-yellow, #FF6A00);"></i> Car Transportation</a></li>
+              <li><a href="<?= site_url('bike-transportation') ?>"><i class="bi bi-scooter" style="color: var(--theme-yellow, #FF6A00);"></i> Bike Transportation</a></li>
+              <li><a href="<?= site_url('packing-and-moving') ?>"><i class="bi bi-box-seam-fill" style="color: var(--theme-yellow, #FF6A00);"></i> Packing &amp; Moving</a></li>
+              <li><a href="<?= site_url('loading-unloading') ?>"><i class="bi bi-truck" style="color: var(--theme-yellow, #FF6A00);"></i> Loading &amp; Unloading</a></li>
             </ul>
           </div>
         </div>
@@ -228,7 +228,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
             <i class="bi bi-truck"></i>
           </div>
           <p class="copyright-text">
-            &copy; <?= date('Y') ?> <strong class="text-danger"><?= $company3 ?></strong>. All Rights Reserved.
+            &copy; <?= date('Y') ?> <strong style="color: var(--theme-blue, #003A6A);"><?= $company3 ?></strong>. All Rights Reserved.
           </p>
         </div>
 

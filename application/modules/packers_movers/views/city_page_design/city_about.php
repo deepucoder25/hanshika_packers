@@ -104,8 +104,8 @@ include 'city_content.php';
                     <!-- Wavy Bottom Accent Background Curve -->
                     <div class="abt-wave-accent">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
-                            <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#d32f2f" opacity="0.15"/>
-                            <path d="M0,35 C480,10 960,50 1440,25 L1440,60 L0,60 Z" fill="#d32f2f" opacity="0.8"/>
+                            <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#003A6A" opacity="0.15"/>
+                            <path d="M0,35 C480,10 960,50 1440,25 L1440,60 L0,60 Z" fill="#003A6A" opacity="0.8"/>
                         </svg>
                     </div>
 

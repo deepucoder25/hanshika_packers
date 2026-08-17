@@ -75,7 +75,7 @@ class MX_Controller
         $this->comp['addressRegion'] = "Siliguri";
         $this->comp['postalCode'] = "734005";
         $this->comp['companystate'] = "West Bengal";
-        $this->comp['themeColor'] = "#d32f2f";
+        $this->comp['themeColor'] = "#003A6A";
 
         $this->comp['experience'] = "5+";
         $this->comp['startYear'] = "2020";

@@ -13,3 +13,25 @@
 @import "packers_movers_modules.css";
 @import "reviews_modules.css";
 @import "template_modules.css";
+
+/* Global Color Variable Overrides */
+.text-danger,
+.text-red {
+  color: var(--theme-blue, #003A6A) !important;
+}
+
+.bg-danger,
+.bg-red {
+  background-color: var(--theme-blue, #003A6A) !important;
+}
+
+.text-warning,
+.text-yellow {
+  color: var(--theme-yellow, #FF6A00) !important;
+}
+
+.bg-warning,
+.bg-yellow {
+  background-color: var(--theme-yellow, #FF6A00) !important;
+}
+

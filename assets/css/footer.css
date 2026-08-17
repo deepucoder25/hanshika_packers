@@ -33,8 +33,8 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: rgba(211, 47, 47, 0.08);
-  color: var(--theme-red);
+  background: rgba(0, 58, 106, 0.08);
+  color: var(--theme-blue);
   display: grid;
   place-items: center;
   font-size: 24px;
@@ -55,14 +55,14 @@
 .cta-phone {
   font-size: 22px;
   font-weight: 800;
-  color: var(--theme-red);
+  color: var(--theme-blue);
   text-decoration: none;
   line-height: 1.2;
   transition: opacity 0.2s ease;
 }
 
 .cta-phone:hover {
-  color: var(--theme-red);
+  color: var(--theme-blue);
   opacity: 0.9;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .btn-request-quote {
-  background: var(--gradient-red);
+  background: var(--gradient-blue);
   color: var(--white, #ffffff);
   font-size: 14px;
   font-weight: 800;
@@ -99,7 +99,7 @@
   border-radius: 50px;
   border: none;
   border-bottom: 3px solid var(--theme-yellow);
-  box-shadow: 0 6px 18px rgba(211, 47, 47, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 58, 106, 0.3);
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -108,7 +108,7 @@
 
 .btn-request-quote:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(211, 47, 47, 0.45);
+  box-shadow: 0 10px 25px rgba(0, 58, 106, 0.45);
   color: var(--white, #ffffff);
 }
 
@@ -142,7 +142,7 @@
 .brand-main {
   font-size: 36px;
   font-weight: 900;
-  color: var(--theme-red);
+  color: var(--theme-blue);
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
@@ -258,7 +258,7 @@
 .widget-title {
   font-size: 15px;
   font-weight: 800;
-  color: var(--theme-red);
+  color: var(--theme-blue);
   margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -281,11 +281,11 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .widget-list li a:hover {
-  color: var(--theme-red);
+  color: var(--theme-blue);
   transform: translateX(4px);
 }
 
@@ -318,9 +318,9 @@
   width: 42px;
   height: 42px;
   border-radius: 8px;
-  background: rgba(211, 47, 47, 0.08);
-  border: 1px solid rgba(211, 47, 47, 0.15);
-  color: var(--theme-red);
+  background: rgba(0, 58, 106, 0.08);
+  border: 1px solid rgba(0, 58, 106, 0.15);
+  color: var(--theme-blue);
   display: grid;
   place-items: center;
   font-size: 18px;
@@ -329,9 +329,9 @@
 }
 
 .footer-contact-blocks .contact-block-item:hover .contact-icon-box {
-  background: var(--theme-red);
+  background: var(--theme-blue);
   color: var(--white, #ffffff);
-  border-color: var(--theme-red);
+  border-color: var(--theme-blue);
 }
 
 .footer-contact-blocks .contact-block-text {
@@ -351,7 +351,7 @@
 }
 
 .footer-contact-blocks .contact-block-text a:hover {
-  color: var(--theme-red);
+  color: var(--theme-blue);
 }
 
 /* 6. Trust Badges Strip (Middle Row) */
@@ -378,8 +378,8 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: rgba(211, 47, 47, 0.08);
-  color: var(--theme-red);
+  background: rgba(0, 58, 106, 0.08);
+  color: var(--theme-blue);
   display: grid;
   place-items: center;
   font-size: 22px;
@@ -423,7 +423,7 @@
 
 .truck-graphic {
   font-size: 30px;
-  color: var(--theme-red);
+  color: var(--theme-blue);
   line-height: 1;
 }
 
@@ -455,7 +455,7 @@
 }
 
 .legal-links a:hover {
-  color: var(--theme-red);
+  color: var(--theme-blue);
 }
 
 .legal-links .sep {
@@ -479,17 +479,17 @@
 }
 
 .scroll-top-btn:hover {
-  background: var(--theme-red);
+  background: var(--theme-blue);
   color: var(--white, #ffffff);
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(211, 47, 47, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 58, 106, 0.45);
 }
 
 /* 8. Floating Action Buttons & Animations */
 @keyframes floatPulseRed {
-  0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.55); }
-  70% { box-shadow: 0 0 0 16px rgba(211, 47, 47, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(0, 58, 106, 0.55); }
+  70% { box-shadow: 0 0 0 16px rgba(0, 58, 106, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 58, 106, 0); }
 }
 
 @keyframes floatPulseGreen {
@@ -499,9 +499,9 @@
 }
 
 @keyframes floatPulseYellow {
-  0% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.65); }
-  70% { box-shadow: 0 0 0 16px rgba(255, 179, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.65); }
+  70% { box-shadow: 0 0 0 16px rgba(255, 106, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0); }
 }
 
 /* Mobile Glass Dock (Default < 992px) */
@@ -575,17 +575,17 @@
   }
 
   .float-call {
-    background: rgba(211, 47, 47, 0.08);
+    background: rgba(0, 58, 106, 0.08);
   }
-  .float-call span { color: var(--theme-red); }
-  .float-call .icon-wrap { background: linear-gradient(135deg, #d32f2f 0%, #ef4444 100%); color: #ffffff; }
+  .float-call span { color: var(--theme-blue); }
+  .float-call .icon-wrap { background: linear-gradient(135deg, #003A6A 0%, #002544 100%); color: #ffffff; }
 
   .float-quote {
-    background: linear-gradient(135deg, #ffb300 0%, #f59e0b 100%);
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+    background: linear-gradient(135deg, #FF6A00 0%, #ea580c 100%);
+    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.35);
   }
-  .float-quote span { color: #0f172a; }
-  .float-quote .icon-wrap { background: #0f172a; color: #ffb300; }
+  .float-quote span { color: #ffffff; }
+  .float-quote .icon-wrap { background: #0f172a; color: #FF6A00; }
 
   .float-whatsapp {
     background: rgba(37, 211, 102, 0.1);
@@ -653,16 +653,16 @@
   }
 
   .float-call .icon-wrap {
-    background: linear-gradient(135deg, #d32f2f 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #003A6A 0%, #002544 100%);
     color: #ffffff;
-    box-shadow: 0 8px 22px rgba(211, 47, 47, 0.45);
+    box-shadow: 0 8px 22px rgba(0, 58, 106, 0.45);
     animation: floatPulseRed 2.5s infinite;
   }
 
   .float-quote .icon-wrap {
-    background: linear-gradient(135deg, #ffb300 0%, #f59e0b 100%);
-    color: #0f172a;
-    box-shadow: 0 8px 22px rgba(255, 179, 0, 0.45);
+    background: linear-gradient(135deg, #FF6A00 0%, #ea580c 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 22px rgba(255, 106, 0, 0.45);
     animation: floatPulseYellow 2.5s infinite 1.6s;
   }
 

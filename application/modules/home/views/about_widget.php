@@ -77,7 +77,7 @@
                     <!-- Bottom Trust Pills Grid -->
                     <div class="about-v2-trust-grid mt-3">
                         <div class="v2-trust-pill">
-                            <i class="bi bi-patch-check-fill text-danger"></i>
+                            <i class="bi bi-patch-check-fill" style="color: var(--theme-blue, #003A6A);"></i>
                             <span>Govt. Registered Shifting</span>
                         </div>
                         <div class="v2-trust-pill">

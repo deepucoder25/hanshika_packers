@@ -40,8 +40,8 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: rgba(211, 47, 47, 0.1);
-    color: var(--theme-red);
+    background: rgba(0, 58, 106, 0.1);
+    color: var(--theme-blue);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -50,11 +50,11 @@
 }
 
 .dyn-bc-link:hover {
-    color: var(--theme-red);
+    color: var(--theme-blue);
 }
 
 .dyn-bc-link:hover .bc-home-icon {
-    background: var(--theme-red);
+    background: var(--theme-blue);
     color: var(--white);
     transform: scale(1.1);
 }
@@ -67,11 +67,11 @@
 .dyn-bc-current {
     color: var(--white) !important;
     font-weight: 800;
-    background: var(--gradient-red);
+    background: var(--gradient-blue);
     padding: 3px 12px;
     border-radius: 20px;
     border: 1px solid var(--theme-yellow);
-    box-shadow: 0 3px 10px rgba(211, 47, 47, 0.25);
+    box-shadow: 0 3px 10px rgba(0, 58, 106, 0.25);
     letter-spacing: 0.2px;
 }
 

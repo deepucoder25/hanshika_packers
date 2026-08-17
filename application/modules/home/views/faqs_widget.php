@@ -67,7 +67,7 @@ $faqs = [
             <!-- Left Column: Company Cardboard Boxes & Plant Image -->
             <div class="col-lg-5 col-12">
                 <div class="faq-image-wrapper text-center">
-                    <img src="<?= base_url('assets/images/home_modules/fags.jpg') ?>" 
+                    <img src="<?= base_url('assets/images/home_modules/faqs.jpg') ?>" 
                          alt="<?= $company3 ?> Boxes" 
                          class="img-fluid faq-boxes-img shadow-sm" loading="lazy" />
                 </div>
