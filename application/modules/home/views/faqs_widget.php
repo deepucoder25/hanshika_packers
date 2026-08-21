@@ -4,32 +4,32 @@
 $faqs = [
     [
         'id' => 1,
-        'question' => '1. How can I get a moving quote?',
-        'answer' => 'You can get a free moving quote by filling out our quick enquiry form or by calling our customer support team.',
+        'question' => "What services does $company3 provide?",
+        'answer' => 'We provide home relocation, office relocation, packing and moving, transportation of cars and bikes, loading, unloading and warehouse services.',
         'active' => true
     ],
     [
         'id' => 2,
-        'question' => '2. Do you provide packing materials?',
-        'answer' => 'Yes, we provide high-quality packing materials including heavy-duty corrugated boxes, bubble wrap, stretch film, and wooden crates for complete safety.',
+        'question' => 'How do I book a moving service?',
+        'answer' => 'You share your relocation requirements with us through a call or contact form and our team understands them and provides you with a suitable moving quote.',
         'active' => false
     ],
     [
         'id' => 3,
-        'question' => '3. Is my goods insured during the move?',
-        'answer' => 'Yes, we offer comprehensive transit insurance options to protect all your household and vehicle items during transit.',
+        'question' => 'Do you provide local and intercity relocation?',
+        'answer' => "Yes. $company3 provides you with local and intercity relocation.",
         'active' => false
     ],
     [
         'id' => 4,
-        'question' => '4. How long does the moving process take?',
-        'answer' => 'Local city moves are completed within 24 hours, while intercity moves usually take 2 to 5 days depending on the destination distance.',
+        'question' => 'How do you pack household belongings?',
+        'answer' => 'Our packing team uses suitable quality packing materials based on the type of your belongings with careful attention to furniture, fragile items, household items and personal belongings.',
         'active' => false
     ],
     [
         'id' => 5,
-        'question' => '5. Do you provide storage facilities?',
-        'answer' => 'Yes, we offer 24/7 CCTV-monitored safe and spacious short-term and long-term warehouse storage facilities.',
+        'question' => 'Can you transport my car and bike?',
+        'answer' => 'Yes. We offer car and bike transportation services for customers who need to move their vehicles along with their household belongings or separately.',
         'active' => false
     ]
 ];

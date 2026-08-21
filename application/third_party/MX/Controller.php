@@ -85,6 +85,7 @@ class MX_Controller
         $this->comp['yearsExperience'] = "5+";
         $this->comp['secureShifting'] = "100%";
         $this->comp['statesCovered'] = "10+";
+        $this->comp['citiesCovered'] = "100+";
 
         $this->comp['sku'] = "PM28957";
         $this->comp['mpn'] = "SPM28957";

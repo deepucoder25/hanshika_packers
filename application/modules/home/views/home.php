@@ -11,6 +11,10 @@ $this->load->view('process_widget');
 
 // Load the Reviews widget
 $this->load->view('review_widget');
+
+// Load the Why Choose Us widget
+$this->load->view('why_choose_widget');
+
 //$this->load->view('city_list');
 // Load the FAQs widget
 $this->load->view('faqs_widget');

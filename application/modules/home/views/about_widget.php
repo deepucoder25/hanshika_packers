@@ -4,6 +4,36 @@
 
 <section class="about-section-v2 py-5">
     <div class="container">
+        
+        <!-- Top Full-Width Hero Intro Box (col-12) -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="about-top-box p-4 p-md-5 rounded-4 shadow-sm bg-white border">
+                    <h2 class="process-heading text-start mb-3">
+                        <?= $company3 ?>: <span class="text-red">Reliable Home, Office and Vehicle Moving Services</span>
+                    </h2>
+
+                    <p>
+                        <?= $company3 ?> offers home shifting, office shifting, packing and moving, vehicle and bike shifting, loading and unloading and storage services. Having <?= $yearsExperience ?> years of experience, with <?= $successfullShifts ?> moves done, <?= $happyClients ?> customers served and operational in <?= $citiesCovered ?> cities, <?= $company3 ?> makes the moving experience easy for you.
+                    </p>
+
+                    <h3 class="process-heading text-start mb-3 fs-3">
+                        Welcome to <span class="text-red"><?= $company3 ?></span>
+                    </h3>
+
+                    <div class="about-intro-text">
+                        <p>You are planning a move. You may have quite a lot of things to take care of: packing of your belongings, transportation and manpower and, last but not least, ensuring that all your stuff gets there safely. Here is where <strong><?= $company3 ?></strong> can come in handy.</p>
+
+                        <p><?= $company3 ?> is a customer-focused moving company helping individuals, families and businesses relocate with ease. From a 1BHK home move to an office relocation, we plan each move according to the type and volume of goods. </p>
+
+                        <p>When choosing a moving company, you want to know what you're paying for, how your belongings will be handled and who you can contact during the move. Our process is designed around these basic needs.</p>
+
+                        <p>With <?= $yearsExperience ?> years of experience and <?= $successfullShifts ?> successful moves behind us we know that a good moving service is not only putting all the boxes in the car. It is about communication, proper packing, transportation and delivery of what was promised.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row align-items-center g-4 g-lg-5">
             
             <!-- Left Side: Content Details -->
@@ -17,16 +47,20 @@
 
                     <!-- SEO Title -->
                     <h2 class="process-heading text-start mb-3">
-                        Reliable Shifting &amp; Relocation Services by <span class="text-red"><?= $company3 ?></span>
+                        About <span class="text-red"><?= $company3 ?></span>
                     </h2>
 
                     <!-- Descriptions -->
-                    <p class="about-v2-lead mb-3">
-                        Moving to a new home, office, or transporting vehicles can feel overwhelming. At <strong><?= $company3 ?></strong>, we are committed to making your relocation journey smooth, secure, and stress-free. Whether shifting locally within <?= $addressRegion ?> or relocating across <?= $companystate ?> and all over India, our team handles every move with extreme care and precision.
+                    <p>
+                        <b><?= $company3 ?></b> started with a simple premise: moving should not cause any unnecessary stress.
                     </p>
 
-                    <p class="about-v2-desc mb-4">
-                        With over <strong><?= $experience ?> years</strong> of professional experience, we stand as one of India's most trusted packing and moving brands. We use industry-standard packaging materials, modern cargo carriers, and structured loading systems to ensure your precious goods arrive safely and on time.
+                    <p>
+                        After <?= $yearsExperience ?> years of experience we have helped our customers manage household relocation, office relocation, vehicle transportation and many other relocation requirements. We now operate in <?= $citiesCovered ?> cities, completing more than <?= $successfullShifts ?> successful moves.
+                    </p>
+
+                    <p>
+                        Every move has different requirements. A household relocation may involve furniture and fragile items, while an office move may need careful planning around working hours. Vehicle transportation also requires a separate loading and handling plan. Our team plans the service according to the type and volume of goods being moved.
                     </p>
 
 
@@ -77,7 +111,7 @@
                     <!-- Bottom Trust Pills Grid -->
                     <div class="about-v2-trust-grid mt-3">
                         <div class="v2-trust-pill">
-                            <i class="bi bi-patch-check-fill" style="color: var(--theme-blue, #003A6A);"></i>
+                            <i class="bi bi-patch-check-fill"></i>
                             <span>Govt. Registered Shifting</span>
                         </div>
                         <div class="v2-trust-pill">

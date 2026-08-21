@@ -5,42 +5,42 @@ $services = [
         'title_part1' => 'Home',
         'title_part2' => 'Shifting',
         'icon' => 'bi bi-house-door-fill',
-        'desc' => 'Professional home shifting services to carefully transport all your household belongings with care and precision.',
+        'desc' => 'We handle household moves for apartments, flats and independent homes, including packing, loading, transportation, unloading and delivery. All of the tasks are carried out by our team – packing, loading, transportation, unloading and delivery.',
         'link' => 'home-relocation'
     ],
     [
         'title_part1' => 'Office',
         'title_part2' => 'Relocation',
         'icon' => 'bi bi-building-fill',
-        'desc' => 'Seamless office relocation services designed to minimize disruption and ensure a smooth business transition.',
+        'desc' => 'Relocation of an office is a complicated process involving careful planning of furniture, equipment, schedules and operation of the company. Our office relocation service helps you organise it properly.',
         'link' => 'office-relocation'
     ],
     [
         'title_part1' => 'Car',
         'title_part2' => 'Transportation',
         'icon' => 'bi bi-car-front-fill',
-        'desc' => 'Safe and reliable car transportation services to ensure your vehicle reaches its destination without hassle.',
+        'desc' => 'We transport cars and bikes from one place to another as per the requirements of the customer. The vehicle is loaded carefully and transported safely to the given location.',
         'link' => 'car-transportation'
     ],
     [
         'title_part1' => 'Bike',
         'title_part2' => 'Transportation',
         'icon' => 'bi bi-scooter',
-        'desc' => 'Efficient bike transportation services tailored to ensure your bike reaches its destination safely and on time.',
+        'desc' => 'We transport bikes from one place to another as per the requirements of the customer. The vehicle is loaded carefully and transported safely to the given location.',
         'link' => 'bike-transportation'
     ],
     [
         'title_part1' => 'Packing &',
         'title_part2' => 'Moving',
         'icon' => 'bi bi-box-seam-fill',
-        'desc' => 'High-grade multi-layer packing and secure moving services using premium materials for maximum protection.',
+        'desc' => 'Our specialists pack your belongings with appropriate high-quality materials before transportation. We pay extra attention to the packing of fragile household items, furniture and other things.',
         'link' => 'packing-and-moving'
     ],
     [
         'title_part1' => 'Loading &',
         'title_part2' => 'Unloading',
         'icon' => 'bi bi-truck-flatbed',
-        'desc' => 'Expert loading and unloading services handling your heavy furniture, fragile items, and delicate cargo safely.',
+        'desc' => 'Our team is capable of providing loading and unloading services. We also provide warehouse and storage solutions when your new premises are not ready yet.',
         'link' => 'loading-unloading'
     ],
 ];

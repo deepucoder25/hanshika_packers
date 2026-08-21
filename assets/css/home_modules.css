@@ -200,6 +200,10 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
+.v2-trust-pill .bi-patch-check-fill {
+  color: var(--theme-blue, #003A6A);
+}
+
 /* --- 2. Services Grid Widget (service_widget.php) --- */
 .services-section {
   background-color: #f8fafc;
@@ -1313,4 +1317,83 @@
     width: 70px;
     height: 70px;
   }
+}
+
+/* --- Why Choose Us Widget (why_choose_widget.php) --- */
+.why-choose-section {
+  background: #fdfbf7;
+  overflow: hidden;
+}
+
+.why-choose-card {
+  border: 1px solid #e2e8f0 !important;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0%;
+  background: linear-gradient(180deg, #dc3545 0%, #ff6a00 100%);
+  transition: height 0.35s ease;
+  border-radius: 4px 0 0 4px;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 58, 106, 0.08) !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+}
+
+.why-choose-card:hover::before {
+  height: 100%;
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(255, 106, 0, 0.15) 100%);
+  color: #dc3545;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.12);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.why-choose-card:hover .why-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #dc3545 0%, #ff6a00 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.3);
+}
+
+.why-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a !important;
+  line-height: 1.35;
+}
+
+.why-card-desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b !important;
+  line-height: 1.65;
+}
+
+.why-choose-note-banner {
+  border-left: 4px solid #dc3545 !important;
+  border: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #ffffff 0%, #fff7f7 100%) !important;
+  color: #0f172a !important;
+}
+
+.note-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: rgba(220, 53, 69, 0.1);
 }

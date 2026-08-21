@@ -73,7 +73,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                Share your moving requirements with us through call or form.
+                                You share your relocation requirements via phone call or contact form and our team understands them and provides a suitable moving quote.
                             </p>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                We provide you with a best and affordable moving quote.
+                               Once we get the moving requirements, we provide a suitable and affordable moving quote.
                             </p>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                Our experts pack your goods using premium quality materials.
+                               Our team packs your belongings using suitable materials based on the type of items being moved.
                             </p>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                We move your goods safely to your desired location.
+                                Once everything is packed and loaded, we transport your belongings safely to your new destination with proper coordination.
                             </p>
                         </div>
                     </div>
@@ -243,7 +243,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                Our team unloads your goods with full care and safety.
+                               Our team carefully unloads your belongings, paying special attention to the furniture, fragile items and household items.
                             </p>
                         </div>
                     </div>
@@ -280,7 +280,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <p class="step-text mb-0">
-                                We deliver and place your goods at your new place.
+                                The goods are delivered according to the agreed service. Once unloading is completed, the team checks that the planned delivery work has been completed.
                             </p>
                         </div>
                     </div>
