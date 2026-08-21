@@ -19,7 +19,7 @@
             
             <!-- Left Side: Sticky Quick Navigation Sidebar -->
             <div class="col-lg-4 col-12">
-                <div class="privacy-sidebar-wrap p-4 shadow-sm position-sticky" style="top: 90px;">
+                <div class="privacy-sidebar-wrap p-4 shadow-sm position-sticky">
                     <div class="privacy-sidebar-header mb-3 pb-2 border-bottom">
                         <i class="bi bi-shield-lock-fill text-red fs-4 me-2"></i>
                         <h4 class="fw-bold text-dark d-inline">Policy Index</h4>

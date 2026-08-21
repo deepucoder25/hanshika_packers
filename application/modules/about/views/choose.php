@@ -3,7 +3,7 @@
 <!-- Dynamic Breadcrumbs -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Why Choose ' . $company3,
-    'bc_desc' => 'Discover the 6 Gold Standards of relocation that make us India\'s most trusted, transparent, and damage-free packers and movers company.',
+    'bc_desc' => 'Discover why ' . $company3 . ' is your trusted, reliable partner for household, office, and vehicle relocation across India.',
     'breadcrumbs' => [
         ['name' => 'Why Choose Us']
     ]
@@ -11,340 +11,213 @@
 ?>
 
 <!-- Why Choose Us Page Container -->
-<section class="choose-page-section py-5">
+<section class="about-page-section py-5">
     <div class="container">
 
-        <!-- 1. Hero Story Banner Card -->
-        <div class="chs-hero-card p-4 p-md-5 mb-5">
+        <!-- 1. Hero / Intro Banner Card -->
+        <div class="abt-hero-card p-4 p-md-5 mb-5 shadow-sm">
             <div class="row align-items-center g-4">
-                <div class="col-lg-12">
-                    <div class="chs-badge-pill mb-3">
-                        <i class="bi bi-patch-check-fill text-warning"></i> 100% RELOCATION SAFETY COMMITMENT
-                    </div>
-                    <h1 class="chs-main-title mb-3">
-                        6 Reasons Why Families &amp; Businesses Choose <span class="chs-highlight"><?= $company3 ?></span>
-                    </h1>
-                    <p class="chs-lead-text mb-4">
-                        Hiring the right relocation company is the difference between a smooth transition and a stressful disaster. At <strong><?= $company3 ?></strong>, we have spent over <?= $yearsExperience ?> years refining our packing, loading, and transit protocols to deliver 100% damage-free moving experiences.
+                <div class="col-12">
+                    <h2 class="abt-sec-title mb-3">Why Should You Choose <?= $company3 ?>?</h2>
+                    <p class="mb-3">
+                        To find the right <em>Packers and Movers</em> means to choose not only the right vehicle but also the reliable company that will take care of furniture, appliances, documentation and other possessions.
                     </p>
-                    <p class="text-muted leading-relaxed mb-4">
-                        Unlike unorganized local movers who use old cartons and surprise customers with hidden fees at delivery, we provide transparent written quotations, 7-layer virgin packing materials, background-verified crew members, and live GPS consignment tracking.
+                    <p class="mb-3">
+                        The approach of <strong><?= $company3 ?></strong> is based on careful handling, clear communication and reliable moving assistance. Over <?= $yearsExperience ?> years of experience, <?= $successfullShifts ?> successful moves, <?= $happyClients ?> satisfied customers and relocation services across <?= $citiesCovered ?> cities have shaped our services according to customer preferences.
                     </p>
-
-                    <!-- Trust Verification Badges -->
-                    <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
-                        <div class="d-flex align-items-center gap-2 bg-light px-3 py-2 rounded-pill border">
-                            <i class="bi bi-shield-fill-check text-success fs-5"></i>
-                            <span class="small fw-bold text-dark">ISO 9001:2015 Certified</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2 bg-light px-3 py-2 rounded-pill border">
-                            <i class="bi bi-file-earmark-lock2-fill text-primary fs-5"></i>
-                            <span class="small fw-bold text-dark">Full Transit Insurance</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2 bg-light px-3 py-2 rounded-pill border">
-                            <i class="bi bi-truck-front-fill text-danger fs-5"></i>
-                            <span class="small fw-bold text-dark">150+ Container Trucks</span>
-                        </div>
-                    </div>
+                    <p class="mb-0">
+                        We think that relocation shouldn't be a difficult process for customers. You should be aware of what will be relocated, who will do that and how.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- 2. The 6 Gold Standards Grid -->
-        <div class="my-5 py-4">
-            <div class="chs-sec-hdr">
-                <span class="chs-sec-subtitle">Service Benchmarks</span>
-                <h2 class="chs-sec-title">The 6 Gold Standards of Safe Relocation</h2>
-            </div>
+        <!-- 2. 6 Reasons to Choose Section -->
+        <div class="abt-hero-card p-4 p-md-5 mb-5 shadow-sm">
+            <h2 class="abt-sec-title mb-4">6 Reasons to Choose <?= $company3 ?></h2>
 
             <div class="row g-4">
-                <!-- Standard 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 01</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-receipt-cutoff"></i>
+                <!-- Reason 1 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-clock-history text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">100% Transparent Upfront Billing</h3>
-                        <p class="chs-card-desc">
-                            We provide itemized written quotations before starting the job. What we quote is what you pay—with zero last-minute delivery surcharges or hidden toll fees.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Itemized quotation document</li>
-                            <li><i class="bi bi-check-circle-fill"></i> All taxes &amp; octroi included upfront</li>
-                            <li><i class="bi bi-check-circle-fill"></i> No cancellation fee traps</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">01. <?= $yearsExperience ?> Years of Moving Experience</h3>
+                        <p class="mb-2">Experience makes the moving team aware of various relocation needs.</p>
+                        <p class="mb-2">In <?= $yearsExperience ?> years of moving services, we helped our clients to move household, offices, vehicles, to pack and move different goods.</p>
+                        <p class="mb-2">The move of the 1BHK household is different from the relocation of the entire office. Our team takes into account all the peculiarities of the job before the work starts.</p>
+                        <p class="mb-0">It's one of the experiences that customers should consider when they compare the Top Packers and Movers.</p>
                     </div>
                 </div>
 
-                <!-- Standard 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 02</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-box-seam-fill"></i>
+                <!-- Reason 2 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-box-seam-fill text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">7-Layer Heavy Duty Packing</h3>
-                        <p class="chs-card-desc">
-                            Every fragile piece of glass, OLED TV, sofa, and antique furniture is wrapped in multi-layer virgin bubble wrap, corrugated sheets, and customized wooden crates.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Heavy-duty bubble wrap &amp; foam</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Wardrobe boxes for clothes</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Waterproof stretch film seal</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">02. <?= $successfullShifts ?> Successful Moves</h3>
+                        <p class="mb-2">Each move provides us with practical experience.</p>
+                        <p class="mb-2">With <?= $successfullShifts ?> successful moves behind our backs, we helped to move furniture, household goods, office items and transport the goods to different locations.</p>
+                        <p class="mb-2">There are many small details that can affect the move. The order of packing, loading, handling and unloading is among them.</p>
+                        <p class="mb-0">And our mission is to take care of these details to make your move less stressful.</p>
                     </div>
                 </div>
 
-                <!-- Standard 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 03</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-truck-front-fill"></i>
+                <!-- Reason 3 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-people-fill text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">Sealed Container Fleet</h3>
-                        <p class="chs-card-desc">
-                            Your goods are carried inside company-owned, weatherproof container trucks equipped with air suspension to eliminate road vibration and rain intrusion.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> 100% weatherproof closed body</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Hydraulic ramps for safe loading</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Belt tie-down cargo locks</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">03. <?= $happyClients ?> Satisfied Customers</h3>
+                        <p class="mb-2">One of the landmarks of <?= $company3 ?> is our customer base.</p>
+                        <p class="mb-2">Over <?= $happyClients ?> customers chose <?= $company3 ?> as their relocation service. It included families, working professionals and businesses needing the reliable Shifting Services.</p>
+                        <p class="mb-0">All our customers are not just the number of orders but people who need our advice, consultation and help to understand their quotation.</p>
                     </div>
                 </div>
 
-                <!-- Standard 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 04</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-people-fill"></i>
+                <!-- Reason 4 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-shield-check text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">Background-Verified Crew</h3>
-                        <p class="chs-card-desc">
-                            We never deploy unverified daily-wage laborers. Every packer, loader, carpenter, and driver is an in-house employee undergoing background checks.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Police-verified personnel</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Skilled furniture carpenters</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Courteous &amp; uniformed crew</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">04. Careful Packing and Handling</h3>
+                        <p class="mb-2">Proper preparation ensures the successful transportation.</p>
+                        <p class="mb-2">Our packing team uses appropriate quality packing materials in accordance with the goods being transported. Different handling is required for fragile goods, furniture, appliances and general household cartons.</p>
+                        <p class="mb-0">The main purpose is to provide protection of your belongings during handling, loading, transportation and unloading.</p>
                     </div>
                 </div>
 
-                <!-- Standard 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 05</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-geo-alt-fill"></i>
+                <!-- Reason 5 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-shield-lock-fill text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">Real-Time Live GPS Fleet Tracking</h3>
-                        <p class="chs-card-desc">
-                            Know exactly where your household goods or vehicle consignment carrier is at any minute with automated GPS updates straight to your mobile.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> 24/7 live location tracking</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Estimated arrival updates</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Direct driver hotline access</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">05. Safe and Secure Delivery Focus</h3>
+                        <p class="mb-2">We know the biggest worry of the clients during the relocation process: Will my belongings reach safely?</p>
+                        <p class="mb-2">The service provided by <?= $company3 ?> is focused on the careful handling of the goods during the entire move. Our team is responsible for packing, loading, transportation, unloading and delivery in accordance with the agreement made.</p>
+                        <p class="mb-2">Our service commitment is 100% Safe &amp; Secure Delivery, as safe transportation is the priority for us during the whole relocation process.</p>
+                        <p class="mb-0">For transit insurance coverage depends on the policy, the goods and the policy terms. We think that our clients should be provided with the information about the insurance before booking.</p>
                     </div>
                 </div>
 
-                <!-- Standard 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="chs-standard-card">
-                        <span class="chs-card-step-badge">STANDARD 06</span>
-                        <div class="chs-icon-wrap">
-                            <i class="bi bi-shield-check"></i>
+                <!-- Reason 6 -->
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-geo-alt-fill text-danger"></i>
                         </div>
-                        <h3 class="chs-card-title">Full Transit Insurance Protection</h3>
-                        <p class="chs-card-desc">
-                            We provide comprehensive transit insurance policies covering unforeseen accidental loss, fire, or natural mishaps with fast, hassle-free claim settlement support.
-                        </p>
-                        <ul class="chs-bullet-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Genuine insurance policy copy</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Quick claim documentation</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Total financial peace of mind</li>
-                        </ul>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">06. Services Available in <?= $citiesCovered ?> Cities</h3>
+                        <p class="mb-2">Relocation isn't always made locally. Now our services are available in <?= $citiesCovered ?> cities and we provide our clients with the local and intercity relocation services.</p>
+                        <p class="mb-2">The list of services includes the household relocation, office shifting, vehicle transportation, bike transportation, packing and moving, loading and unloading and storage services.</p>
+                        <p class="mb-0">So we are able to offer both Local Packers and Movers and the long distance moving services.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 3. Comparison Matrix: Us vs Unorganized Local Movers -->
-        <div class="my-5 py-4">
-            <div class="chs-sec-hdr">
-                <span class="chs-sec-subtitle">The Clear Difference</span>
-                <h2 class="chs-sec-title"><?= $company3 ?> vs Local Unorganized Movers</h2>
-            </div>
-
-            <div class="chs-matrix-card">
-                <div class="table-responsive">
-                    <table class="table chs-matrix-table align-middle">
-                        <thead>
-                            <tr class="border-bottom">
-                                <th class="text-dark">Relocation Criteria</th>
-                                <th class="chs-col-brand text-center"><?= $company3 ?></th>
-                                <th class="chs-col-others text-center">Unorganized Local Movers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-currency-rupee text-red me-2"></i> Upfront Pricing</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> 100% Fixed Written Quotation (Zero Hidden Charges)
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> Unwritten verbal estimates with high extra demands at delivery
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-box-seam text-red me-2"></i> Packing Materials</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> 7-Layer Virgin Bubble Wrap, Corrugated Rolls &amp; Crates
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> Single-layer old used cartons &amp; plastic bags
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-truck text-red me-2"></i> Fleet Safety</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> Sealed Weatherproof Containers with Air Suspension
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> Open pickup vans exposed to rain, dust, &amp; theft
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-person-badge text-red me-2"></i> Crew Verification</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> In-House Trained, Uniformed &amp; Background-Checked
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> Untrained daily-wage street laborers
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-geo-alt text-red me-2"></i> Consignment Tracking</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> Real-Time Live GPS Fleet Tracking 24/7
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> No tracking access, driver calls go unanswered
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-dark"><i class="bi bi-shield-check text-red me-2"></i> Risk Coverage</td>
-                                <td class="chs-col-brand">
-                                    <div class="chs-matrix-check">
-                                        <i class="bi bi-check-circle-fill"></i> 100% Genuine Transit Insurance Policy Document
-                                    </div>
-                                </td>
-                                <td class="chs-col-others">
-                                    <div class="chs-matrix-cross">
-                                        <i class="bi bi-x-circle-fill"></i> No insurance policy or damage compensation
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. Customer Peace of Mind Guarantees -->
-        <div class="my-5 py-4">
-            <div class="chs-sec-hdr">
-                <span class="chs-sec-subtitle">Our Commitments</span>
-                <h2 class="chs-sec-title">4 Peace-of-Mind Promises Every Customer Receives</h2>
-            </div>
+        <!-- 3. What Makes Our Moving Service Unique? -->
+        <div class="abt-hero-card p-4 p-md-5 mb-5 shadow-sm">
+            <h2 class="abt-sec-title mb-4">What Makes Our Moving Service Unique?</h2>
 
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="chs-guarantee-card h-100">
-                        <div class="chs-guarantee-icon">
-                            <i class="bi bi-headset"></i>
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-sliders text-danger"></i>
                         </div>
-                        <h4 class="chs-guarantee-title">24/7 Move Manager</h4>
-                        <p class="chs-guarantee-desc">A single point of contact dedicated to coordinate your entire relocation process.</p>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">A Process Tailored to the Customer Requirement</h3>
+                        <p class="mb-2">We don't suppose that every client has the same moving plan.</p>
+                        <p class="mb-2">Families can need assistance during the entire household relocation. Working professionals can require relocation of selected furniture to another city. Business can require the relocation of office equipment and furniture within a certain schedule.</p>
+                        <p class="mb-0">Our team first understands the requirement and coordinates the corresponding moving service.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="chs-guarantee-card h-100">
-                        <div class="chs-guarantee-icon">
-                            <i class="bi bi-clipboard2-check-fill"></i>
+                <div class="col-lg-6">
+                    <div class="abt-box-card p-4 h-100">
+                        <div class="abt-fleet-icon mb-3">
+                            <i class="bi bi-chat-quote-fill text-danger"></i>
                         </div>
-                        <h4 class="chs-guarantee-title">Doorstep Pre-Move Survey</h4>
-                        <p class="chs-guarantee-desc">Free volume assessment and customized packing strategy prior to booking.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="chs-guarantee-card h-100">
-                        <div class="chs-guarantee-icon">
-                            <i class="bi bi-gem"></i>
-                        </div>
-                        <h4 class="chs-guarantee-title">Zero Damage Goal</h4>
-                        <p class="chs-guarantee-desc">Specialized foam wrapping for glass, TVs, marble tops, and fragile art pieces.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="chs-guarantee-card h-100">
-                        <div class="chs-guarantee-icon">
-                            <i class="bi bi-clock-check-fill"></i>
-                        </div>
-                        <h4 class="chs-guarantee-title">On-Time Delivery</h4>
-                        <p class="chs-guarantee-desc">Strict adherence to scheduled dispatch and doorstep unloading timelines.</p>
+                        <h3 class="fw-bold text-dark fs-5 mb-3">Clear Communication Is Important</h3>
+                        <p class="mb-2">Relocation can become stressful if the information is unclear.</p>
+                        <p class="mb-2">That's why we pay much attention to the communication in regard to customer requirements, quotation and moving arrangements. Customers should understand everything before the move.</p>
+                        <p class="mb-0">This approach helps us to create trust in the Best Packers and Movers.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 5. Call to Action Banner -->
-        <div class="chs-cta-card mt-5 p-4 p-md-5">
+        <!-- 4. Our Figures Show Part of Our Work -->
+        <div class="abt-hero-card p-4 p-md-5 mb-5 shadow-sm">
+            <h2 class="abt-sec-title mb-3">Our Figures Show Part of Our Work</h2>
+            <h3 class="fw-bold text-dark fs-5 mb-4">Experience Visible to Customers</h3>
+
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="abt-milestone-card p-4">
+                        <div class="abt-milestone-year"><?= $yearsExperience ?> Years</div>
+                        <h4 class="abt-milestone-title fs-6"><?= $yearsExperience ?> Years</h4>
+                        <p class="mb-0">Experience in relocation services</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="abt-milestone-card p-4">
+                        <div class="abt-milestone-year"><?= $successfullShifts ?> Moves</div>
+                        <h4 class="abt-milestone-title fs-6"><?= $successfullShifts ?></h4>
+                        <p class="mb-0">Successful moves</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="abt-milestone-card p-4">
+                        <div class="abt-milestone-year"><?= $happyClients ?> Clients</div>
+                        <h4 class="abt-milestone-title fs-6"><?= $happyClients ?></h4>
+                        <p class="mb-0">Satisfied customers</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="abt-milestone-card p-4">
+                        <div class="abt-milestone-year"><?= $citiesCovered ?> Cities</div>
+                        <h4 class="abt-milestone-title fs-6"><?= $citiesCovered ?></h4>
+                        <p class="mb-0">Cities served</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="abt-milestone-card p-4 border-danger">
+                        <div class="abt-milestone-year bg-danger text-white">100% Safe</div>
+                        <h4 class="abt-milestone-title text-danger fs-6">100%</h4>
+                        <p class="mb-0">Safe &amp; Secure Delivery service commitment</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-0">
+                These numbers are important but we understand that only figures don't make the moving company trustworthy. The proof of the pudding is in the eating and we try to take care of it.
+            </p>
+        </div>
+
+        <!-- 5. Looking for the Reliable Packers and Movers? -->
+        <div class="abt-hero-card p-4 p-md-5 mb-5 shadow-sm border">
             <div class="row align-items-center justify-content-between g-4">
-                <div class="col-lg-8">
-                    <div class="d-flex align-items-center gap-2 mb-2 text-warning fw-bold small">
-                        <i class="bi bi-stars"></i> EXPERIENCE SAFE &amp; STRESS-FREE SHIFTING TODAY
-                    </div>
-                    <h2 class="fw-bold text-white mb-3">Book India's Most Trusted Movers &amp; Packers</h2>
-                    <p class="text-white opacity-100 fw-medium leading-relaxed mb-0 chs-cta-text">
-                        Contact <strong><?= $company3 ?></strong> today for a free doorstep survey and written quotation. Experience 100% transparent pricing and damage-free delivery.
+                <div class="col-12">
+                    <h2 class="abt-sec-title mb-2">Looking for the Reliable Packers and Movers?</h2>
+                    <h3 class="fw-bold text-danger fs-5 mb-3">Receive the Moving Quotation According to Your Requirement</h3>
+                    <p class="mb-3">
+                        Planning household shift, office relocation or vehicle transportation?
                     </p>
-                </div>
-                <div class="col-lg-4 text-lg-end text-center d-flex flex-nowrap gap-2 gap-sm-3 justify-content-center justify-content-lg-end">
-                    <button type="button" class="btn chs-cta-btn" data-bs-toggle="modal" data-bs-target="#qteModal">
-                        <i class="bi bi-calculator-fill me-1 me-sm-2"></i> Get Free Quote
-                    </button>
-                    <a href="<?= $phonehtml ?>" class="btn chs-cta-outline-btn">
-                        <i class="bi bi-telephone-fill me-1 me-sm-2"></i> <?= $phone ?>
-                    </a>
+                    <p class="mb-3">
+                        Provide <strong><?= $company3 ?></strong> with the pickup location, destination, moving date and basic moving requirement. Our team will understand your requirements and provide you with the suitable moving quotation.
+                    </p>
+                    <p class="mb-0">
+                        When comparing <b>Top Packers and Movers</b> or choosing the <b>Best Packers and Movers</b>, you should pay attention to the experience, transparent communication, careful handling and service corresponding to your requirement.
+                    </p>
                 </div>
             </div>
         </div>

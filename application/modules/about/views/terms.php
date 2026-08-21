@@ -18,7 +18,7 @@
             
             <!-- Left Side: Sticky Quick Navigation Sidebar -->
             <div class="col-lg-4 col-12">
-                <div class="terms-sidebar-wrap p-4 shadow-sm position-sticky" style="top: 90px;">
+                <div class="terms-sidebar-wrap p-4 shadow-sm position-sticky">
                     <div class="terms-sidebar-header mb-3 pb-2 border-bottom">
                         <i class="bi bi-file-earmark-text-fill text-red fs-4 me-2"></i>
                         <h4 class="fw-bold text-dark d-inline">Terms Index</h4>

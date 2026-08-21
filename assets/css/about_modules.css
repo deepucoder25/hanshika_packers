@@ -365,6 +365,7 @@
     background: #ffffff;
     border-radius: 20px;
     border: 1px solid #e2e8f0;
+    top: 90px;
 }
 
 .privacy-quick-nav .nav-link {
@@ -430,6 +431,7 @@
     background: #ffffff;
     border-radius: 20px;
     border: 1px solid #e2e8f0;
+    top: 90px;
 }
 
 .terms-quick-nav .nav-link {
@@ -871,9 +873,9 @@
 }
 
 .abt-cta-card {
-    background: linear-gradient(135deg, #003A6A 0%, #800000 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 58, 106, 0.25);
+    background: linear-gradient(135deg, #003A6A 0%, #001f3f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 58, 106, 0.18);
     color: #ffffff;
     border-radius: 24px;
     padding: 45px 35px;
@@ -1255,4 +1257,145 @@
         padding: 10px 14px !important;
         font-size: 12.5px !important;
     }
+}
+
+/* --- Enhanced About Us Page Styles --- */
+.about-page-section p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.65;
+}
+
+.abt-sec-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.abt-box-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.abt-box-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 58, 106, 0.08);
+    border-color: rgba(0, 58, 106, 0.25);
+}
+
+.abt-question-box {
+    background: #f8fafc;
+    border-left: 4px solid #dc3545 !important;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- CTA V3 Premium Design --- */
+.abt-cta-v3-container {
+    background: linear-gradient(135deg, #002544 0%, #003A6A 60%, #00152e 100%);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 37, 68, 0.3);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.abt-badge-pill-gold {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 30px;
+    background: rgba(255, 106, 0, 0.15);
+    border: 1px solid rgba(255, 106, 0, 0.4);
+    color: #ff9d00;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.abt-cta-v3-btn {
+    background: linear-gradient(135deg, #FF6A00 0%, #ee5100 100%);
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 25px rgba(255, 106, 0, 0.4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt-cta-v3-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 106, 0, 0.6);
+    color: #ffffff !important;
+}
+
+.abt-v3-subcard {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.abt-v3-subcard:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 106, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+.abt-v3-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 106, 0, 0.18);
+    color: #ff9d00;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+/* --- Relocation Banner Specific Styles --- */
+.abt-relocation-banner {
+    background: linear-gradient(135deg, #003A6A 0%, #09192f 100%);
+    border-radius: 24px;
+    border-left: 6px solid #FF6A00;
+    box-shadow: 0 15px 40px rgba(0, 58, 106, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta-v4 {
+    background: linear-gradient(135deg, #FF6A00 0%, #ee5100 100%);
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 15.5px;
+    padding: 15px 28px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.btn-cta-v4:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(255, 106, 0, 0.6);
+    color: #ffffff !important;
 }
