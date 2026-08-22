@@ -25,28 +25,36 @@
         <?php
         $faqs = [
             [
-                "q" => "How early should I book shifting services in $city?",
-                "a" => "Booking at least 5–7 days in advance is recommended, especially for month-end dates and weekends when relocation demand is at its peak. However, we also cater to urgent same-day booking requests based on vehicle availability."
+                "q" => "Are we available in $city?",
+                "a" => "Yes. We serve customers across 10+ cities and provide shifting support in $city as per its service availability."
             ],
             [
-                "q" => "Do you provide packing materials?",
-                "a" => "Yes! We provide multi-layer protective packing materials including heavy-duty corrugated cartons, bubble wrap rolls, stretch film, edge guards, and waterproof tarpaulin covers tailored to your household items."
+                "q" => "What type of shifting services do you provide?",
+                "a" => "The company provides packing and moving support for home and office shifting, along with loading, unloading and transportation services."
             ],
             [
-                "q" => "Can I move only a few household items?",
-                "a" => "Absolutely. We offer flexible single-item shifting, small apartment moves, and part-load truck transportation services within $city at affordable mini-truck rates."
+                "q" => "Are we a government registered shifting company?",
+                "a" => "Yes. Our company is presented as a Government Registered Shifting service provider."
             ],
             [
-                "q" => "Are goods insured during relocation?",
-                "a" => "Yes, we offer comprehensive transit insurance options covering your valuable belongings against accidental damage, fire, or theft during intercity or long-distance transit."
+                "q" => "How many successful moves have you completed?",
+                "a" => "We have completed around 5,000+ successful moves."
             ],
             [
-                "q" => "Do you handle local office shifts in $city?",
-                "a" => "Yes! Our commercial relocation team specializes in office furniture dismantle/reassemble, server & desktop packing, confidential file moving, and weekend shifting to minimize business downtime."
+                "q" => "How many relocation specialists do you have?",
+                "a" => "We have around 300+ trained relocation specialists."
             ],
             [
-                "q" => "What is the cost of packers and movers in $city?",
-                "a" => "Shifting charges depend on the distance, volume of goods, elevator availability, and floor level. Contact our local $city team for a 100% transparent, flat-rate quote with zero hidden fees."
+                "q" => "Are we ISO certified?",
+                "a" => "Yes. Our company is ISO 9001:2015 certified."
+            ],
+            [
+                "q" => "Do you provide transit insurance?",
+                "a" => "Yes. 100% transit insurance is available. You should confirm the exact terms and coverage before booking for your clarity."
+            ],
+            [
+                "q" => "How can I get a quotation?",
+                "a" => "You have to follow simple steps:\nShare your pickup location, destination, moving date and details of the items you want to shift.Our team can then understand the work and provide you a quotation based on your requirement."
             ],
         ];
 
@@ -65,7 +73,7 @@
             </button>
             <div id="cfaq<?= $i ?>" class="collapse <?= $isOpen ? 'show' : '' ?>" data-bs-parent="#cityFaqAccordion">
                 <div class="pm-faq-body">
-                    <?= htmlspecialchars($faq['a']) ?>
+                    <?= nl2br(htmlspecialchars($faq['a'])) ?>
                 </div>
             </div>
         </div>

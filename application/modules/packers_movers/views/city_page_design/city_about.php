@@ -17,13 +17,6 @@ include 'city_content.php';
                             <div class="abt-eyebrow">
                                 <span class="abt-eyebrow-line"></span> ABOUT US
                             </div>
-                            <h2 class="abt-title">
-                                Moving You Forward With <span class="text-danger">Care &amp; Trust</span> in <?= htmlspecialchars($city) ?>
-                            </h2>
-                            <div class="abt-dash-divider">
-                                <span class="abt-dash-red"></span>
-                                <span class="abt-dash-yellow"></span>
-                            </div>
                             
                             <div class="abt-prose">
                                 <?php echo $htmlcontent; ?>
@@ -136,6 +129,17 @@ include 'city_content.php';
                     </div>
                 </div>
 
+                 <div class="pm-seo-card mb-4">
+
+                    <div class="pm-seo-body"> 
+                      <?= $htmlcontent2 ?>
+                    </div>
+                </div>
+
+                 <div class="pm-seo-card mb-4">
+ 
+                      <?= $htmlcontent3 ?>
+                </div>
                 <!-- Google Map -->
                 <div class="pm-city-map my-4">
                     <?php include 'city_map.php'; ?>
@@ -145,6 +149,11 @@ include 'city_content.php';
                 <div class="mt-4">
                     <?php include 'city_reviews.php'; ?>
                     <?php include 'city_faq.php'; ?>
+                </div>
+
+                <!-- Looking for Packers and Movers Section -->
+                <div class="pm-seo-card mt-4">
+                  <?= $htmlcontent4 ?>      
                 </div>
 
             </div>
